@@ -4,21 +4,19 @@ import pprint
 import csv
 
 def main():
-    ...
+    lake_id = "08004500"
+    lake_info = get_lake_info(lake_id)
+    
+    fish_catch_data = get_fish_catch_summary_data(lake_info)
+    fish_length_data = get_fish_length_summary_data(lake_info)
 
-#JSON response formatted in a list of dictionaries
-def noniterated_JSON_response():
-    response = requests.get("https://maps2.dnr.state.mn.us/cgi-bin/lakefinder/detail.cgi?type=lake_survey&id=08004500")
-    print(json.dumps(response.json(), indent=2))
+    fish_length_summary_csv(fish_length_data,lake_id)
+    fish_catch_summary_csv(fish_catch_data,lake_id)
 
-#JSON response iterated and filtered for key
-
+#JSON response for MN lake id number.
 def get_lake_info(lake_id):
     response = requests.get("https://maps2.dnr.state.mn.us/cgi-bin/lakefinder/detail.cgi?type=lake_survey&id="+lake_id)
     return response.json()
-
-lake_id = "08004500"
-lake_info = get_lake_info(lake_id)
 
 #pretty print the json so I know what I'm looking at
 def fish_data(d):
@@ -27,22 +25,10 @@ def fish_data(d):
     pprint.pprint(d["result"]["surveys"][0].keys())
     pprint.pprint(d["result"]["surveys"][1]["lengths"])
 
-#list of survey dates
-def get_survey_dates(d):
-    survey_dates = [d["result"]["surveys"][_]["surveyDate"] for _ in range(len(d["result"]["surveys"]))]
+def get_survey_dates(lake_info):
+    survey_dates = [lake_info["result"]["surveys"][_]["surveyDate"] for _ in range(len(lake_info["result"]["surveys"]))]
     print(survey_dates)
 
-#list of dictionaries
-def get_fish_catch_summaries(d):
-    fish_catch_summaries = [{d["result"]["surveys"][_]["surveyDate"]: d["result"]["surveys"][_]["fishCatchSummaries"]} for _ in range(len(d["result"]["surveys"]))]
-    pprint.pprint(fish_catch_summaries)
-
-#list of dictionaries
-def get_fish_length_summaries(d):
-    fish_length_summaries = [{d["result"]["surveys"][_]["surveyDate"]: d["result"]["surveys"][_]["lengths"]} for _ in range(len(d["result"]["surveys"]))]
-    pprint.pprint(fish_length_summaries)
-
-#dictionary of dictionaries
 def get_species_summary_data(d,species):
     species_list = []
     for i in range(len(d["result"]["surveys"])): 
@@ -55,28 +41,31 @@ def get_species_summary_data(d,species):
                 fish_catch_summary["survey_ID"] = survey_id
                 species_list.append(fish_catch_summary)
     pprint.pprint(species_list)
-    
-def get_fish_catch_summary_data(d):
+
+#lake_info is .json() from requests.get
+def get_fish_catch_summary_data(lake_info):
     fish_catch_list = []
-    for i in range(len(d["result"]["surveys"])): 
-        survey_date = d["result"]["surveys"][i]["surveyDate"]
-        survey_id = d["result"]["surveys"][i]["surveyID"]
-        for j in range(len(d["result"]["surveys"][i]["fishCatchSummaries"])):
-            fish_catch_summary = d["result"]["surveys"][i]["fishCatchSummaries"][j]
+    for i in range(len(lake_info["result"]["surveys"])): 
+        survey_date = lake_info["result"]["surveys"][i]["surveyDate"]
+        survey_id = lake_info["result"]["surveys"][i]["surveyID"]
+        for j in range(len(lake_info["result"]["surveys"][i]["fishCatchSummaries"])):
+            fish_catch_summary = lake_info["result"]["surveys"][i]["fishCatchSummaries"][j]
             fish_catch_summary["survey_date"] = survey_date
             fish_catch_summary["survey_ID"] = survey_id
             fish_catch_list.append(fish_catch_summary)
     return fish_catch_list
 
-def get_fish_length_summary_data(d):
+def get_fish_length_summary_data(lake_info):
     fish_length_list = []
-    for i in range(len(d["result"]["surveys"])): 
-        survey_date = d["result"]["surveys"][i]["surveyDate"]
-        survey_id = d["result"]["surveys"][i]["surveyID"]
-        for j in d["result"]["surveys"][i]["lengths"].keys():
+    for i in range(len(lake_info["result"]["surveys"])): 
+        survey_date = lake_info["result"]["surveys"][i]["surveyDate"]
+        survey_id = lake_info["result"]["surveys"][i]["surveyID"]
+        for j in lake_info["result"]["surveys"][i]["lengths"].keys():
             fish_length_summary = {}
-            fish_length_summary["fish_name"] = j
-            fish_length_summary["length_data"] = d["result"]["surveys"][i]["lengths"][j]
+            fish_length_summary["species"] = j
+            fish_length_summary["fish_count"] = lake_info["result"]["surveys"][i]["lengths"][j]["fishCount"]
+            fish_length_summary["maximum_length"] = lake_info["result"]["surveys"][i]["lengths"][j]["maximum_length"]
+            fish_length_summary["minimum_length"] = lake_info["result"]["surveys"][i]["lengths"][j]["minimum_length"]
             fish_length_summary["survey_date"] = survey_date
             fish_length_summary["survey_ID"] = survey_id
             fish_length_list.append(fish_length_summary)
@@ -109,8 +98,10 @@ def fish_catch_summary_csv(fish_catch_data, lake_id):
 def fish_length_summary_csv(fish_length_data, lake_id):
     with open(f'Resources/{lake_id}_lengths.csv', 'w', newline='') as csvfile:
         fieldnames = [
-            'fish_name',
-            'length_data',
+            'species',
+            'fish_count',
+            'maximum_length',
+            'minimum_length',
             'survey_ID',
             'survey_date',
             ]
@@ -118,12 +109,6 @@ def fish_length_summary_csv(fish_length_data, lake_id):
         writer.writeheader()
         for _ in fish_length_data:
             writer.writerow(_)
-
-fish_catch_data = get_fish_catch_summary_data(lake_info)
-fish_length_data = get_fish_length_summary_data(lake_info)
-
-#fish_length_summary_csv(fish_length_data,lake_id)
-#fish_catch_summary_csv(fish_catch_data,lake_id)
 
 if __name__ == "__main__":
     main()

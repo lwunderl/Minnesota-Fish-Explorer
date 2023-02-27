@@ -8,7 +8,7 @@ def main():
 
 #must be list of dictionaries
 def lake_list_csv(lake_list, file_name):
-    with open(f'{file_name}.csv', 'w', newline='') as csvfile:
+    with open(f'Resources/{file_name}.csv', 'w', newline='') as csvfile:
         fieldnames = [
             'county',
             'lake_id',

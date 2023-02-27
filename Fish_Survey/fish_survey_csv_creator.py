@@ -4,12 +4,10 @@ import pprint
 import csv
 
 def main():
-    lake_id = "08004500"
+    lake_id = input("Enter Lake ID ")
     lake_info = get_lake_info(lake_id)
-    
     fish_catch_data = get_fish_catch_summary_data(lake_info)
     fish_length_data = get_fish_length_summary_data(lake_info)
-
     fish_length_summary_csv(fish_length_data,lake_id)
     fish_catch_summary_csv(fish_catch_data,lake_id)
 

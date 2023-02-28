@@ -6,7 +6,7 @@ def main():
     lake_list = txt_filter(file_location)
     lake_list_csv(lake_list, "lake_id_list")
 
-#must be list of dictionaries
+#write csv
 def lake_list_csv(lake_list, file_name):
     with open(f'Resources/{file_name}.csv', 'w', newline='') as csvfile:
         fieldnames = [

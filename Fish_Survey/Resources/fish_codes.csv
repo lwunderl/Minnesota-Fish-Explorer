@@ -1,11 +1,11 @@
-name,code
+desc,code
 Lamprey,LAM
 Chestnut Lamprey,CHL
 Silver Lamprey,SIL
 American Brook Lamprey,ABL
 Sea Lamprey ,SEL
 Sturgeon,STG
-Lake Sturgeon ,STG
+Lake Sturgeon ,LKS
 Shovelnose Sturgeon,SLS
 Paddlefish,PAH
 Gar,GAR
@@ -66,3 +66,119 @@ River Shiner,RVS
 Common Shiner,CSH
 Bigmouth Shiner,BMS
 Pugnose Minnow,PGM
+Blackchin Shiner,BCS
+Blacknose Shiner,BNS
+Spottail Shiner,SPO
+Red Shiner,RDS
+Rosyface Shiner,RFS
+Spotfin Shiner,SFS
+Sand Shiner,SDS
+Wee Shiner,WDS
+Topeka Shiner,TKS
+Redfin Shiner,RES
+Mimic Shiner,MMS
+Suckermouth Minnow,SKM
+Northern Rebelly Dace,NRD
+Southern Redbelly Dace,SRD
+Finescale Dace,FND
+Bluntnose Minnow,BNM
+Fathead Minnow,FHM
+Bullhead Minnow,BHM
+Blacknose Dace,BND
+Longnose Dace,LND
+Creek Chub,CRC
+Pearl Dace,PRD
+Chub,CHU
+Dace,DAC
+Carpsucker,CPS
+River Carpsucker,RCS
+Quillback,QBS
+Highfin Carpsucker,HFS
+Suckers,OTS
+Longnose Sucker,LNS
+White Sucker,WTS
+Blue Sucker,BLS
+Northern Hog Sucker,NHS
+Buffalo,BUF
+Smallmouth Buffalo,SAB
+Bigmouth Buffalo,BIB
+Spotted Sucker,SPS
+Redhorse,RHS
+Silver Redhorse,SLR
+River Redhorse,RRH
+Black Redhorse,BRH
+Golden Redhorse,GLR
+Shorthead Redhorse,SHR
+Greater Redhorse,GRR
+Catfish,CAT
+Bullhead,BLH
+Blue Catfish,BCF
+Black Bullhead,BLB
+Yellow Bullhead,YEB
+Brown Bullhead,BRB
+Channel Catfish,CCF
+Slender Madtom,SDM
+Stonecat,STC
+Tadpole Madtom,TPM
+Flathead Catfish,FCF
+Pirate Perch,PRP
+Trout-Perch,TRP
+Burbot,BUB
+Banded Killifish,BKF
+Plains Topminnow,PTM
+Brook Silverside,BKS
+Stickleback,STK
+Brook Stickleback,BST
+Ninespine Stickleback,NST
+White Perch,WHP
+White Bass,WHB
+Yellow Bass,YLB
+Rock Bass,RKB
+Sunfish,SUN
+Hybrid Sunfish,HSF
+Green Sunfish,GSF
+Pumpkinseed Sunfish,PMK
+Warmouth,WAM
+Orangespotted Sunfish,OSS
+Bluegill,BLG
+Longear Sunfish,LES
+Bass,BAS
+Smallmouth Bass,SMB
+Largemouth Bass,LMB
+Crappie,CRP
+White Crappie,WHC
+Black Crappie,BLC
+Darter,DAR
+Crystal Darter,CRD
+Western Sand Darter,WSD
+Mud Darter,MDD
+Rainbow Darter,RBD
+Bluntnose Darter,BLD
+Iowa Darter,IOD
+Fantail Darter,FTD
+Least Darter,LED
+Johnny Darter,JND
+Banded Darter,BDD
+Yellow Perch,YEP
+River Ruffe,RIR
+Logperch,LBP
+Gilt Darter,GLD
+Blackside Darter,BSD
+Slenderhead Darter,SHD
+River Darter,RVD
+Sauger,SAR
+Walleye,WAE
+Freshwater Drum,FRD
+Sculpin,SCU
+Mottled Sculpin,MTS
+Slimy Sculpin,SMS
+Spoonhead Sculpin,SHS
+Deepwater Sculpin,DWS
+Panfish,PAN
+Salmon-Trout,SAT
+Walleye-Sauger,WAS
+Walleye-Northern Pike,WNP
+Turtles,OTT
+Snapping Turtle,SNT
+Softshell Turtle,SST
+Painted Turtle,PNT

@@ -8,8 +8,9 @@ def main():
     lake_info = get_lake_info(lake_id)
     fish_catch_data = get_fish_catch_summary_data(lake_info)
     fish_length_data = get_fish_length_summary_data(lake_info)
-    fish_length_summary_csv(fish_length_data,lake_id)
     fish_catch_summary_csv(fish_catch_data,lake_id)
+    fish_length_summary_csv(fish_length_data,lake_id)
+
 
 #JSON response for MN lake id number.
 def get_lake_info(lake_id):
@@ -28,7 +29,7 @@ def get_survey_dates(lake_info):
     print(survey_dates)
 
 #not currently in use
-def get_species_summary_data(d,species):
+"""def get_species_summary_data(d,species):
     species_list = []
     for i in range(len(d["result"]["surveys"])): 
         survey_date = d["result"]["surveys"][i]["surveyDate"]
@@ -39,7 +40,7 @@ def get_species_summary_data(d,species):
                 fish_catch_summary["survey_date"] = survey_date
                 fish_catch_summary["survey_ID"] = survey_id
                 species_list.append(fish_catch_summary)
-    pprint.pprint(species_list)
+    pprint.pprint(species_list)"""
 
 #lake_info is .json() from requests.get
 def get_fish_catch_summary_data(lake_info):
@@ -49,6 +50,7 @@ def get_fish_catch_summary_data(lake_info):
         survey_id = lake_info["result"]["surveys"][i]["surveyID"]
         for j in range(len(lake_info["result"]["surveys"][i]["fishCatchSummaries"])):
             fish_catch_summary = lake_info["result"]["surveys"][i]["fishCatchSummaries"][j]
+            fish_catch_summary["lake_name"] = lake_info["result"]["lakeName"]
             fish_catch_summary["lake_ID"] = lake_info["result"]["DOWNumber"]
             fish_catch_summary["survey_date"] = survey_date
             fish_catch_summary["survey_ID"] = survey_id
@@ -63,6 +65,7 @@ def get_fish_length_summary_data(lake_info):
         for j in lake_info["result"]["surveys"][i]["lengths"].keys():
             fish_length_summary = {}
             fish_length_summary["lake_ID"] = lake_info["result"]["DOWNumber"]
+            fish_length_summary["lake_name"] = lake_info["result"]["lakeName"]
             fish_length_summary["species"] = j
             fish_length_summary["fish_count"] = lake_info["result"]["surveys"][i]["lengths"][j]["fishCount"]
             fish_length_summary["maximum_length"] = lake_info["result"]["surveys"][i]["lengths"][j]["maximum_length"]
@@ -80,6 +83,7 @@ def fish_catch_summary_csv(fish_catch_data, lake_id):
     with open(f'Resources/{lake_id}_catch.csv', 'w', newline='') as csvfile:
         fieldnames = [
             'lake_ID',
+            'lake_name',
             'CPUE',
             'averageWeight',
             'gear',
@@ -101,6 +105,7 @@ def fish_length_summary_csv(fish_length_data, lake_id):
     with open(f'Resources/{lake_id}_lengths.csv', 'w', newline='') as csvfile:
         fieldnames = [
             'lake_ID',
+            'lake_name',
             'species',
             'fish_count',
             'maximum_length',

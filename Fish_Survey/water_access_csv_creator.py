@@ -4,20 +4,21 @@ import time
 
 def main():
     i = 0
+    was_summary_csv_header()
     with open('Resources/was_id_info/was_id_list.csv', newline='') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
-            time.sleep(10)
             i += 1
             was_id = row[0]
             was_info = get_was_info(was_id)
             try:
                 was_list = []
                 was_summary = get_was_summary_data(was_info)
+                was_summary["Site ID"] = was_id
                 was_list.append(was_summary)
                 was_summary_csv(was_list)
-                if i % 100 == 0 and i >= 100:
-                    print(f"Processing {i}")
+                if i % 50 == 0 and i >= 50:
+                    print(f"Processing {i}, {was_id}")
             except TypeError:
                 pass
     
@@ -42,9 +43,31 @@ def get_was_summary_data(was_info):
     was_summary["Ramp Surface"] = was_info["result"]["facilities"]["launch"]["ramp_surface"]
     return was_summary
 
+def was_summary_csv_header():
+    with open(f'Resources/was_id_info/water_access_information.csv', 'a', newline='') as csvfile:
+        fieldnames = [
+            "Site ID",
+            "Site Name",
+            "Directions to Site",
+            "Site Coordinates",
+            "Administrator of Site",
+            "Number of Docks",
+            "Number of Restrooms",
+            "Number of Parking Lots",
+            "Number of Accessible Spaces",
+            "Number of Trailer Spaces",
+            "Number of Vehicle Spaces",
+            "Parking Lot Surface",
+            "Number of Ramps",
+            "Ramp Surface"
+            ]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+
 def was_summary_csv(was_list):
     with open(f'Resources/was_id_info/water_access_information.csv', 'a', newline='') as csvfile:
         fieldnames = [
+            "Site ID",
             "Site Name",
             "Directions to Site",
             "Site Coordinates",

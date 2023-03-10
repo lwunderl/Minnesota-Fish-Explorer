@@ -1,46 +1,32 @@
 import json
 import requests
-import pprint
 import csv
+import time
 
 def main():
-    lake_id = input("Enter Lake ID ")
-    lake_info = get_lake_info(lake_id)
-    fish_catch_data = get_fish_catch_summary_data(lake_info)
-    fish_length_data = get_fish_length_summary_data(lake_info)
-    fish_catch_summary_csv(fish_catch_data,lake_id)
-    fish_length_summary_csv(fish_length_data,lake_id)
-
+    i = 0
+    with open('Resources/lake_id_info/lake_id_list.csv', newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            time.sleep(10)
+            i += 1
+            lake_id = row[1]
+            lake_info = get_lake_info(lake_id)
+            try:
+                catch_list = []
+                catch_summary_list = get_fish_catch_summary_data(lake_info)
+                for catch in catch_summary_list:
+                    catch_list.append(catch)
+                fish_catch_summary_csv(catch_list)
+                if i % 100 == 0 and i >= 100:
+                    print(f"Processing {i}")
+            except TypeError:
+                pass
 
 #JSON response for MN lake id number.
 def get_lake_info(lake_id):
     response = requests.get("https://maps2.dnr.state.mn.us/cgi-bin/lakefinder/detail.cgi?type=lake_survey&id="+lake_id)
     return response.json()
-
-#pretty print the json so I know what I'm looking at
-def fish_data(d):
-    pprint.pprint(d.keys())
-    pprint.pprint(d["result"].keys())
-    pprint.pprint(d["result"]["surveys"][0].keys())
-    pprint.pprint(d["result"]["surveys"][1]["lengths"])
-
-def get_survey_dates(lake_info):
-    survey_dates = [lake_info["result"]["surveys"][_]["surveyDate"] for _ in range(len(lake_info["result"]["surveys"]))]
-    print(survey_dates)
-
-#not currently in use
-"""def get_species_summary_data(d,species):
-    species_list = []
-    for i in range(len(d["result"]["surveys"])): 
-        survey_date = d["result"]["surveys"][i]["surveyDate"]
-        survey_id = d["result"]["surveys"][i]["surveyID"]
-        for j in range(len(d["result"]["surveys"][i]["fishCatchSummaries"])):
-            fish_catch_summary = d["result"]["surveys"][i]["fishCatchSummaries"][j]
-            if fish_catch_summary["species"] == species:
-                fish_catch_summary["survey_date"] = survey_date
-                fish_catch_summary["survey_ID"] = survey_id
-                species_list.append(fish_catch_summary)
-    pprint.pprint(species_list)"""
 
 #lake_info is .json() from requests.get
 def get_fish_catch_summary_data(lake_info):
@@ -56,24 +42,6 @@ def get_fish_catch_summary_data(lake_info):
             fish_catch_summary["survey_ID"] = survey_id
             fish_catch_list.append(fish_catch_summary)
     return fish_catch_list
-
-def get_fish_length_summary_data(lake_info):
-    fish_length_list = []
-    for i in range(len(lake_info["result"]["surveys"])): 
-        survey_date = lake_info["result"]["surveys"][i]["surveyDate"]
-        survey_id = lake_info["result"]["surveys"][i]["surveyID"]
-        for j in lake_info["result"]["surveys"][i]["lengths"].keys():
-            fish_length_summary = {}
-            fish_length_summary["lake_ID"] = lake_info["result"]["DOWNumber"]
-            fish_length_summary["lake_name"] = lake_info["result"]["lakeName"]
-            fish_length_summary["species"] = j
-            fish_length_summary["fish_count"] = lake_info["result"]["surveys"][i]["lengths"][j]["fishCount"]
-            fish_length_summary["maximum_length"] = lake_info["result"]["surveys"][i]["lengths"][j]["maximum_length"]
-            fish_length_summary["minimum_length"] = lake_info["result"]["surveys"][i]["lengths"][j]["minimum_length"]
-            fish_length_summary["survey_date"] = survey_date
-            fish_length_summary["survey_ID"] = survey_id
-            fish_length_list.append(fish_length_summary)
-    return fish_length_list
 
 #create .csv of fish catch survey summary
 #fish_catch_data = get_fish_catch_summary_data(get_lake_info("lake_id"))
@@ -99,23 +67,6 @@ def fish_catch_summary_csv(fish_catch_data, lake_id):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for _ in fish_catch_data:
-            writer.writerow(_)
-            
-def fish_length_summary_csv(fish_length_data, lake_id):
-    with open(f'Resources/{lake_id}_lengths.csv', 'w', newline='') as csvfile:
-        fieldnames = [
-            'lake_ID',
-            'lake_name',
-            'species',
-            'fish_count',
-            'maximum_length',
-            'minimum_length',
-            'survey_ID',
-            'survey_date',
-            ]
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        for _ in fish_length_data:
             writer.writerow(_)
 
 if __name__ == "__main__":

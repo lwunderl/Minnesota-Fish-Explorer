@@ -47,8 +47,8 @@ def get_fish_catch_summary_data(lake_info):
 #fish_catch_data = get_fish_catch_summary_data(get_lake_info("lake_id"))
 #example: fish_catch_data = get_fish_catch_summary_data(get_lake_info("08004500"))
 #lake_id = "08004500"
-def fish_catch_summary_csv(fish_catch_data, lake_id):
-    with open(f'Resources/{lake_id}_catch.csv', 'w', newline='') as csvfile:
+def fish_catch_summary_csv(catch_list):
+    with open(f'Resources/fish_catch.csv', 'a', newline='') as csvfile:
         fieldnames = [
             'lake_ID',
             'lake_name',
@@ -65,8 +65,7 @@ def fish_catch_summary_csv(fish_catch_data, lake_id):
             'totalWeight'
             ]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        for _ in fish_catch_data:
+        for _ in catch_list:
             writer.writerow(_)
 
 if __name__ == "__main__":

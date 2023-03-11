@@ -4,6 +4,7 @@ import csv
 import time
 
 def main():
+    fish_length_summary_csv_header()
     i = 0
     with open('../lake_id_info/lake_id_list.csv', newline='') as csvfile:
         reader = csv.reader(csvfile)
@@ -36,7 +37,6 @@ def get_fish_length_summary_data(lake_info):
         for j in lake_info["result"]["surveys"][i]["lengths"].keys():
             fish_length_summary = {}
             fish_length_summary["lake_ID"] = lake_info["result"]["DOWNumber"]
-            fish_length_summary["lake_name"] = lake_info["result"]["lakeName"]
             fish_length_summary["species"] = j
             fish_length_summary["fish_count"] = lake_info["result"]["surveys"][i]["lengths"][j]["fishCount"]
             fish_length_summary["maximum_length"] = lake_info["result"]["surveys"][i]["lengths"][j]["maximum_length"]
@@ -45,12 +45,25 @@ def get_fish_length_summary_data(lake_info):
             fish_length_summary["survey_ID"] = survey_id
             fish_length_list.append(fish_length_summary)
     return fish_length_list
-            
+
+def fish_length_summary_csv_header():
+    with open(f'fish_lengths.csv', 'a', newline='') as csvfile:
+        fieldnames = [
+            'lake_ID',
+            'species',
+            'fish_count',
+            'maximum_length',
+            'minimum_length',
+            'survey_ID',
+            'survey_date',
+            ]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+
 def fish_length_summary_csv(length_list):
     with open(f'fish_lengths.csv', 'a', newline='') as csvfile:
         fieldnames = [
             'lake_ID',
-            'lake_name',
             'species',
             'fish_count',
             'maximum_length',

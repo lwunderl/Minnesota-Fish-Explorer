@@ -1,3 +1,49 @@
 Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Administrator of Site,Lake Area,Lake Depth
 01004000,Aitkin,Aitkin,Libby,"[-93.289871, 46.804042]",,658.82,35
 01003100,Anderson,Aitkin,Sheshebee,"[-93.232645, 46.737721]",,91.34,16
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Lake Depth
+01004000,Aitkin,Aitkin,Libby,"[-93.289871, 46.804042]",658.82,35
+01003100,Anderson,Aitkin,Sheshebee,"[-93.232645, 46.737721]",91.34,16
+01016900,Bachelor,Aitkin,Aitkin,"[-93.72684, 46.473611]",53.56,47
+01004600,Ball Bluff,Aitkin,Jacobson,"[-93.280365, 46.932611]",168.64,78
+01006300,Bass,Aitkin,McGregor,"[-93.3107, 46.80833]",89.13,42
+01007300,Bass,Aitkin,McGregor,"[-93.369439, 46.62145]",56.98,58
+01018300,Bass,Aitkin,Aitkin,"[-93.753878, 46.523935]",32.15,38
+01019500,Bass,Aitkin,Swatara,"[-93.712614, 46.851439]",120.33,42
+01004900,Bay,Aitkin,Jacobson,"[-93.248377, 46.902037]",35.16,36
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Lake Depth,Water Access Sites
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Lake Depth,Water Access Sites
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Lake Depth,Water Access Sites
+01004600,Ball Bluff,Aitkin,Jacobson,"[-93.280365, 46.932611]",168.64,78,['was01599']
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Lake Depth,Water Access Sites
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Lake Depth,Water Access Sites
+01004000,Aitkin,Aitkin,Libby,"[-93.289871, 46.804042]",658.82,35,
+01003100,Anderson,Aitkin,Sheshebee,"[-93.232645, 46.737721]",91.34,16,
+01016900,Bachelor,Aitkin,Aitkin,"[-93.72684, 46.473611]",53.56,47,
+01004600,Ball Bluff,Aitkin,Jacobson,"[-93.280365, 46.932611]",168.64,78,['was01599']
+01006300,Bass,Aitkin,McGregor,"[-93.3107, 46.80833]",89.13,42,
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Lake Depth,Water Access Sites
+01004000,Aitkin,Aitkin,Libby,"[-93.289871, 46.804042]",658.82,35,[]
+01003100,Anderson,Aitkin,Sheshebee,"[-93.232645, 46.737721]",91.34,16,[]
+01016900,Bachelor,Aitkin,Aitkin,"[-93.72684, 46.473611]",53.56,47,[]
+01004600,Ball Bluff,Aitkin,Jacobson,"[-93.280365, 46.932611]",168.64,78,['was01599']
+01006300,Bass,Aitkin,McGregor,"[-93.3107, 46.80833]",89.13,42,[]
+01007300,Bass,Aitkin,McGregor,"[-93.369439, 46.62145]",56.98,58,[]
+01018300,Bass,Aitkin,Aitkin,"[-93.753878, 46.523935]",32.15,38,[]
+01019500,Bass,Aitkin,Swatara,"[-93.712614, 46.851439]",120.33,42,[]
+01004900,Bay,Aitkin,Jacobson,"[-93.248377, 46.902037]",35.16,36,[]
+01006400,Bear,Aitkin,McGrath,"[-93.365978, 46.240797]",123.61,60,[]
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Littoral Area,Lake Depth,Mean Depth,Water Access Sites
+Lake ID,Lake Name,Lake County,Nearest Town,Lake Coordinates,Lake Area,Littoral Area,Lake Depth,Mean Depth,Water Access Sites
+01004000,Aitkin,Aitkin,Libby,"[-93.289871, 46.804042]",658.82,453,35,0,[]
+01003100,Anderson,Aitkin,Sheshebee,"[-93.232645, 46.737721]",91.34,83,16,3,[]
+01016900,Bachelor,Aitkin,Aitkin,"[-93.72684, 46.473611]",53.56,30,47,12,[]
+01004600,Ball Bluff,Aitkin,Jacobson,"[-93.280365, 46.932611]",168.64,32,78,25,['was01599']
+01006300,Bass,Aitkin,McGregor,"[-93.3107, 46.80833]",89.13,55,42,0,[]
+01007300,Bass,Aitkin,McGregor,"[-93.369439, 46.62145]",56.98,16,58,0,[]
+01018300,Bass,Aitkin,Aitkin,"[-93.753878, 46.523935]",32.15,16,38,11,[]
+01019500,Bass,Aitkin,Swatara,"[-93.712614, 46.851439]",120.33,89,42,7,[]
+01004900,Bay,Aitkin,Jacobson,"[-93.248377, 46.902037]",35.16,23.49,36,0,[]
+01006400,Bear,Aitkin,McGrath,"[-93.365978, 46.240797]",123.61,93,60,10,[]
+01014400,Bible,Aitkin,Hill City,"[-93.636499, 47.00211]",19.06,11,45,0,[]
+01015700,Big Pine,Aitkin,Cutler,"[-93.773076, 46.355391]",638.03,259,78,0,['was02736']

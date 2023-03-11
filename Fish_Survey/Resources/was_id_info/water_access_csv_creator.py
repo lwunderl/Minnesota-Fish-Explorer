@@ -5,16 +5,16 @@ import time
 def main():
     i = 0
     was_summary_csv_header()
-    with open('Resources/was_id_info/was_id_list.csv', newline='') as csvfile:
+    with open('was_id_list.csv', newline='') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
+            time.sleep(10)
             i += 1
             was_id = row[0]
             was_info = get_was_info(was_id)
             try:
                 was_list = []
                 was_summary = get_was_summary_data(was_info)
-                was_summary["Site ID"] = was_id
                 was_list.append(was_summary)
                 was_summary_csv(was_list)
                 if i % 50 == 0 and i >= 50:
@@ -28,10 +28,12 @@ def get_was_info(was_id):
 
 def get_was_summary_data(was_info):
     was_summary = {}
+    was_summary["Site ID"] = was_info["result"]["id"]
     was_summary["Site Name"] = was_info["result"]["name"]
     was_summary["Directions to Site"] = was_info["result"]["directions"]
     was_summary["Site Coordinates"] = was_info["result"]["point"]["epsg:4326"]
     was_summary["Administrator of Site"] = was_info["result"]["administrator"]
+    was_summary["Site Type"] = was_info["result"]["type"]
     was_summary["Number of Docks"] = was_info["result"]["facilities"]["num_docks"]
     was_summary["Number of Restrooms"] = was_info["result"]["facilities"]["num_restrooms"]
     was_summary["Number of Parking Lots"] = was_info["result"]["facilities"]["parking"]["num_lots"]
@@ -44,13 +46,14 @@ def get_was_summary_data(was_info):
     return was_summary
 
 def was_summary_csv_header():
-    with open(f'Resources/was_id_info/water_access_information.csv', 'a', newline='') as csvfile:
+    with open(f'water_access_information.csv', 'a', newline='') as csvfile:
         fieldnames = [
             "Site ID",
             "Site Name",
             "Directions to Site",
             "Site Coordinates",
             "Administrator of Site",
+            "Site Type",
             "Number of Docks",
             "Number of Restrooms",
             "Number of Parking Lots",
@@ -65,13 +68,14 @@ def was_summary_csv_header():
         writer.writeheader()
 
 def was_summary_csv(was_list):
-    with open(f'Resources/was_id_info/water_access_information.csv', 'a', newline='') as csvfile:
+    with open(f'water_access_information.csv', 'a', newline='') as csvfile:
         fieldnames = [
             "Site ID",
             "Site Name",
             "Directions to Site",
             "Site Coordinates",
             "Administrator of Site",
+            "Site Type",
             "Number of Docks",
             "Number of Restrooms",
             "Number of Parking Lots",

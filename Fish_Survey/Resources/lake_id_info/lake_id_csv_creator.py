@@ -2,13 +2,13 @@ import csv
 import re
 
 def main():
-    file_location = "Resources/lake_id_info/lake_id_list.txt"
+    file_location = "lake_id_list.txt"
     lake_list = txt_filter(file_location)
     lake_list_csv(lake_list, "lake_id_list")
 
 #write csv
 def lake_list_csv(lake_list, file_name):
-    with open(f'Resources/lake_id_info/{file_name}.csv', 'w', newline='') as csvfile:
+    with open(f'{file_name}.csv', 'w', newline='') as csvfile:
         fieldnames = [
             'county',
             'lake_id',

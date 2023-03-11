@@ -5,7 +5,7 @@ import time
 
 def main():
     i = 0
-    with open('Resources/lake_id_info/lake_id_list.csv', newline='') as csvfile:
+    with open('../lake_id_info/lake_id_list.csv', newline='') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
             time.sleep(10)
@@ -48,7 +48,7 @@ def get_fish_catch_summary_data(lake_info):
 #example: fish_catch_data = get_fish_catch_summary_data(get_lake_info("08004500"))
 #lake_id = "08004500"
 def fish_catch_summary_csv(catch_list):
-    with open(f'Resources/fish_catch.csv', 'a', newline='') as csvfile:
+    with open(f'fish_catch.csv', 'a', newline='') as csvfile:
         fieldnames = [
             'lake_ID',
             'lake_name',

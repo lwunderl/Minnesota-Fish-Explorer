@@ -29,6 +29,7 @@ def get_lake_info(lake_id):
     response = requests.get("https://maps2.dnr.state.mn.us/cgi-bin/lakefinder/detail.cgi?type=lake_survey&id="+lake_id)
     return response.json()
 
+#fish length summary returns a list of dictionaries lengths and counts by species by survey ID
 def get_fish_length_summary_data(lake_info):
     fish_length_list = []
     for i in range(len(lake_info["result"]["surveys"])): 
@@ -46,6 +47,7 @@ def get_fish_length_summary_data(lake_info):
             fish_length_list.append(fish_length_summary)
     return fish_length_list
 
+#write header for .csv file
 def fish_length_summary_csv_header():
     with open(f'fish_lengths.csv', 'a', newline='') as csvfile:
         fieldnames = [
@@ -60,6 +62,7 @@ def fish_length_summary_csv_header():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
+#write row for .csv file
 def fish_length_summary_csv(length_list):
     with open(f'fish_lengths.csv', 'a', newline='') as csvfile:
         fieldnames = [

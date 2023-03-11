@@ -29,7 +29,7 @@ def get_lake_info(lake_id):
     response = requests.get("https://maps2.dnr.state.mn.us/cgi-bin/lakefinder/detail.cgi?type=lake_survey&id="+lake_id)
     return response.json()
 
-#lake_info is .json() from requests.get
+#catch summary data returns a list of dictionaries CPUE's by species by survey ID
 def get_fish_catch_summary_data(lake_info):
     fish_catch_list = []
     for i in range(len(lake_info["result"]["surveys"])): 
@@ -43,6 +43,7 @@ def get_fish_catch_summary_data(lake_info):
             fish_catch_list.append(fish_catch_summary)
     return fish_catch_list
 
+#write the header of the .csv file
 def fish_catch_summary_csv_header():
     with open(f'fish_catch.csv', 'a', newline='') as csvfile:
         fieldnames = [
@@ -62,6 +63,7 @@ def fish_catch_summary_csv_header():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
+#write the rows of the .csv file
 def fish_catch_summary_csv(catch_list):
     with open(f'fish_catch.csv', 'a', newline='') as csvfile:
         fieldnames = [

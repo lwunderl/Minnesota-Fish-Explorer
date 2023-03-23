@@ -17,10 +17,10 @@ def main():
                 was_summary = get_was_summary_data(was_info)
                 was_list.append(was_summary)
                 was_summary_csv(was_list)
-                if i % 50 == 0 and i >= 50:
-                    print(f"Processing {i}, {was_id}")
             except TypeError:
                 pass
+            if i % 50 == 0 and i >= 50:
+                print(f"Processing {i}, {was_id}")
     
 def get_was_info(was_id):
     response = requests.get("https://maps1.dnr.state.mn.us/cgi-bin/compass/feature_detail.cgi?id="+was_id)

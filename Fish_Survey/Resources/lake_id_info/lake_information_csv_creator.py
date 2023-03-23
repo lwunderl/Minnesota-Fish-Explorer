@@ -19,10 +19,11 @@ def main():
                 lake_summary = get_lake_summary_data(lake_info, was_info)
                 lake_list.append(lake_summary)
                 lake_summary_csv(lake_list)
-                if i % 100 == 0 and i >= 100:
-                    print(f"Processing {i}")
             except TypeError:
+                print(f"{row[1]} not found...")
                 pass
+            if i % 100 == 0 and i >= 100:
+                print(f"Processing {i}")
 
 def get_lake_info(lake_id):
     response = requests.get("https://maps1.dnr.state.mn.us/cgi-bin/lakefinder_json.cgi?id="+lake_id)

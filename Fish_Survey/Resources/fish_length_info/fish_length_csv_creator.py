@@ -22,6 +22,7 @@ def main():
                 if i % 100 == 0 and i >= 100:
                     print(f"Processing {i}")
             except TypeError:
+                print(f"{row[1]} not found...")
                 pass
 
 #JSON response for MN lake id number.

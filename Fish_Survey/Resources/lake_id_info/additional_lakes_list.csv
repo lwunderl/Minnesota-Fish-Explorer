@@ -1,0 +1,571 @@
+Name,ID,Nearest Town,County
+Davis (Main Bay),1007101,McGregor,Aitkin
+Hill (North Basin),1014201,,Aitkin
+Hill (South Basin),1014202,,Aitkin
+Cedar(Main Basin),1020901,,Aitkin
+Cedar(West Bay),1020903,,Aitkin
+Unnamed (south portion),2011402,Ramsey (Anoka),Anoka
+South Tamarack,3024101,Rochert,Becker
+North Tamarack,3024102,Rochert,Becker
+Floyd (south bay),3038702,,Becker
+Minnetonka,3053100,Audubon,Becker
+Axberg (Main Basin),3066001,,Becker
+Axberg (West Basin),3066002,,Becker
+Bemidji (main lake),4013002,Lavinia (Beltrami),Beltrami
+Big Bass (west basin),4013201,Lavinia (Beltrami),Beltrami
+Big Bass (east basin),4013202,Lavinia (Beltrami),Beltrami
+Unnamed (North portion),4044501,,Beltrami
+Unnamed (South portion),4044502,,Beltrami
+Donovan (main bay),5000402,,Benton
+Eagle (North),7006001,,Blue Earth
+Eagle (South),7006002,,Blue Earth
+Upper (North) Island,9006001,Cromwell,Carlton
+Lower (South) Island,9006002,Cromwell,Carlton
+Wassermann (Main),10004801,,Carver
+Unnamed (north portion),10020001,Victoria,Carver
+Unnamed (south portion),10020002,Victoria,Carver
+Little Thunder (West Bay),11000901,,Cass
+Little Thunder (East Bay),11000902,,Cass
+Roosevelt - North,11004301,,Cass
+Roosevelt - South,11004302,,Cass
+Inguadona (N. Bay),11012001,,Cass
+Inguadona (S. Bay),11012002,,Cass
+Long (South of Main),11014201,,Cass
+Long (Main Basin),11014202,,Cass
+Long (North of Main),11014203,,Cass
+Long (South West Bay),11014204,,Cass
+Wabedo (North East Bay),11017101,,Cass
+Wabedo (South West Bay),11017102,,Cass
+Broadwater Bay,11020101,,Cass
+Woman (main lake),11020102,Longville,Cass
+Leech (Main Basin),11020301,,Cass
+Leech (Kabekona Bay),11020302,,Cass
+Leech (Shingobee Bay),11020304,,Cass
+Sylvan (Southwest Bay),11030401,,Cass
+Sylvan (Northeast Bay),11030402,,Cass
+Big Portage (West Bay),11030801,,Cass
+Big Portage (East Bay),11030802,,Cass
+Fourth (south portion),11046502,,Cass
+Little Bass (Main),11047701,,Cass
+Chisago (north portion),13001201,,Chisago
+Chisago (south portion),13001202,,Chisago
+North Center Lake,13003201,Center City,Chisago
+North Center Pond,13003202,Center City,Chisago
+Green (Main Basin),13004102,,Chisago
+South Sunrise Pool,13005901,Stacy,Chisago
+North Sunrise Pool,13005903,Stacy,Chisago
+Chain (North Portion),13006301,Harris,Chisago
+Chain (South Portion),13006302,North Branch,Chisago
+Goose (North Bay),13008301,,Chisago
+Goose (South Bay),13008302,,Chisago
+Long (west bay),15005001,,Clearwater
+Long (main bay),15005002,,Clearwater
+Unnamed (South Portion),15021302,,Clearwater
+Gull (Main Basin),16063201,,Cook
+Elbow (Main Basin),16080501,,Cook
+Double (North Portion),17005601,,Cottonwood
+Double (South Portion),17005602,,Cottonwood
+Crooked (Sugar Bay),18004101,,Crow Wing
+Crooked (Main Bay),18004102,,Crow Wing
+Twin (West Basin),18016701,,Crow Wing
+Twin (East Basin),18016702,,Crow Wing
+O'Brien (Southwest Bay),18022701,,Crow Wing
+O'Brien (Northeast Bay),18022702,,Crow Wing
+Horseshoe (East Bay),18025101,,Crow Wing
+Horseshoe (West Bay),18025102,,Crow Wing
+Eagle (Main Bay),18029601,,Crow Wing
+Eagle (West Bay),18029602,,Crow Wing
+Eagle (East Bay),18029603,,Crow Wing
+Pelican (NE Bay),18030801,,Crow Wing
+Pelican (main lake),18030802,,Crow Wing
+Cross Lake Reservoir (Main Basin),18031201,,Crow Wing
+Cross Lake Reservoir (Southeast Bay),18031202,,Crow Wing
+Cross Lake Reservoir (Unnamed Bay),18031203,,Crow Wing
+Gilbert (East Bay),18032001,,Crow Wing
+Gilbert (West Bay),18032002,,Crow Wing
+Gilbert (South Bay),18032003,,Crow Wing
+Upper Whipple,18038701,,Crow Wing
+Lower Whipple,18038703,,Crow Wing
+Marion (East Bay),19002601,,Dakota
+Marion (Middle Bay),19002602,,Dakota
+Marion (West Bay),19002603,,Dakota
+North Twin,19002801,,Dakota
+South Twin,19002802,,Dakota
+Main,19020302,Cedar Grove,Dakota
+Latoka (North Bay),21010601,,Douglas
+Latoka (South Bay),21010602,,Douglas
+Lobster (East Bay),21014401,,Douglas
+Lobster (West Bay),21014402,,Douglas
+Little Oscar (Main),21015601,,Douglas
+Crooked (Northwest Bay),21019901,,Douglas
+North Oscar,21025701,,Douglas
+South Oscar,21025702,,Douglas
+Eng (main basin),21027401,,Douglas
+Fountain (East Bay),24001801,,Freeborn
+Fountain (West Bay),24001802,,Freeborn
+Fountain (North Bay),24001803,,Freeborn
+North,25001704,Etter,Goodhue
+Cornelia (North),27002801,,Hennepin
+Cornelia (South),27002802,,Hennepin
+North Anderson,27006201,Bloomington,Hennepin
+Southeast Anderson,27006202,Rowland,Hennepin
+Southwest Anderson,27006203,Rowland,Hennepin
+Shady Oak (North Bay),27008901,,Hennepin
+Shady Oak (Middle Bay),27008902,,Hennepin
+Shady Oak (South Bay),27008903,,Hennepin
+Gleason (Main Lake),27009501,Wayzata,Hennepin
+Turtle (north portion),27010101,Plymouth,Hennepin
+Turtle (south portion),27010102,Plymouth,Hennepin
+Rice Main Lake,27011601,,Hennepin
+Rice - West Bay,27011602,,Hennepin
+Rice - South Marsh,27011603,,Hennepin
+Rice - Outlet Bay,27011604,,Hennepin
+Cook (North Portion),27012001,,Hennepin
+Cook (South Portion),27012002,,Hennepin
+Minnetonka-Grays Bay,27013301,,Hennepin
+Minnetonka-Carsons Bay,27013303,,Hennepin
+Minnetonka-St. Albans Bay,27013304,,Hennepin
+Minnetonka-Halsteds Bay,27013309,,Hennepin
+Minnetonka-Crystal Bay,27013310,,Hennepin
+Minnetonka-Maxwell Bay,27013311,,Hennepin
+Minnetonka-Stubbs Bay,27013312,,Hennepin
+Minnetonka-North Arm,27013313,,Hennepin
+Minnetonka-Jennings Bay,27013315,,Hennepin
+French Marsh (North),27014001,,Hennepin
+French Marsh (South),27014002,,Hennepin
+Peter (Main Basin),27014701,Leighton,Hennepin
+Peter (North Bay),27014702,,Hennepin
+North Little Long,27017901,,Hennepin
+South Little Long,27017902,,Hennepin
+North Whaletail,27018401,,Hennepin
+South Whaletail,27018402,,Hennepin
+Loring (South Bay),27065502,,Hennepin
+Unnamed (North portion),27091601,,Hennepin
+Unnamed (South portion),27091602,,Hennepin
+Eleventh Crow Wing (Main),29003601,,Hubbard
+Spider (NE/SW Bay),29011701,,Hubbard
+Spider (East Bay),29011702,,Hubbard
+Mantrap (East Basin),29015101,,Hubbard
+Mantrap (Middle Basin),29015102,,Hubbard
+Mantrap (Mirror Bay),29015103,,Hubbard
+Mantrap (Home Bay),29015105,,Hubbard
+Peysenske (Main Bay),29016901,,Hubbard
+Peysenske (East Bay),29016902,,Hubbard
+Blue (North Bay),30010701,,Isanti
+Blue (South Bay),30010702,,Isanti
+Twin (East Bay),31002601,,Itasca
+Twin (West Bay),31002602,,Itasca
+O'Brien (north portion),31003201,,Itasca
+Swan (West Bay),31006701,,Itasca
+Swan (Main Basin),31006702,,Itasca
+Swan (Southwest Bay),31006703,,Itasca
+Long (Main Bay),31026601,Bigfork,Itasca
+Prairie (main bay),31038402,,Itasca
+Pokegama (Main Bay),31053201,,Itasca
+Jack the Horse (North),31065701,,Itasca
+Jack the Horse (South),31065702,,Itasca
+Bustic,31071300,Bigfork,Itasca
+Cut Foot Sioux(Main Bay),31085701,,Itasca
+Cut Foot Sioux(East Bay),31085702,,Itasca
+North Lower's,32001601,Bergen,Jackson
+South Lower's,32001602,Bergen,Jackson
+Fish (Bullhead Bay),32001802,,Jackson
+Fish (Main Lake),32001803,,Jackson
+Heron (North Marsh),32005701,Heron Lake,Jackson
+Heron (North Heron),32005705,,Jackson
+Heron (South Heron),32005707,Lakefield,Jackson
+Elizabeth (Main Lake),34002202,Atwater,Kandiyohi
+Wheeler (southeast bay),34005101,,Kandiyohi
+Wheeler (northeast bay),34005102,,Kandiyohi
+Lake Monongalia - main basin,34015801,,Kandiyohi
+"Wakanda, Lake (East Bay)",34016902,,Kandiyohi
+"Wakanda, Lake (Main Basin)",34016903,,Kandiyohi
+Willmar (main bay),34018001,,Kandiyohi
+Willmar (south bay),34018002,,Kandiyohi
+Unnamed (North Portion),34023501,,Kandiyohi
+Unnamed (South Portion),34023502,,Kandiyohi
+Norway (Northwest),34025101,,Kandiyohi
+Norway (Southern),34025102,,Kandiyohi
+Unnamed (Center Bay),34047601,,Kandiyohi
+Unnamed (East Bay),34047602,,Kandiyohi
+Dawson,36001202,Gemmell,Koochiching
+Lac qui Parle (SE Bay),37004601,,Lac Qui Parle
+Lac qui Parle (NW Bay),37004602,,Lac Qui Parle
+Unnamed-Northeast Portion,37013401,Madison,Lac Qui Parle
+Unnamed-Southwest Portion,37013402,Madison,Lac Qui Parle
+Crooked (East Bay),38002401,,Lake
+Crooked (West Bay),38002402,,Lake
+Hogback,38005700,Isabella,Lake
+Jenny (West Bay),38019401,,Lake
+North Lark,38072101,Ely,Lake
+Lake of the Woods (Main),39000201,,Lake of the Woods
+Lake of the Woods (Fourmile Bay),39000202,,Lake of the Woods
+Swede's Bay,40009203,Marysburg,Le Sueur
+Rice (North portion),40011401,,Le Sueur
+Rice (South portion),40011402,,Le Sueur
+Dead Coon (Main Lake),41002101,Arco,Lincoln
+Bakers (north portion),43004801,Brownton,McLeod
+Otter (Main Basin),43008501,,McLeod
+Willmert (Main Bay),46001401,Fairmont,Martin
+Sylvan (Main Basin),49003601,,Morrison
+Sylvan (North Basin),49003602,,Morrison
+North Marsh,51008901,Current Lake,Murray
+Ocheda (West Basin),53002401,,Nobles
+Ocheda (Middle Bay),53002402,,Nobles
+Ocheda (East Basin),53002403,,Nobles
+North Central Pond,55002402,,Olmsted
+South Central Pond,55002403,,Olmsted
+Portage (main bay),56014001,Ottertail,Otter Tail
+Bull Head (main bay),56017101,Clitherall,Otter Tail
+Stuart (Main Basin),56019101,,Otter Tail
+Stuart (Little West Bay),56019102,,Otter Tail
+Hancock (main lake),56025501,Urbank,Otter Tail
+Third Silver (Main Bay),56030204,Battle Lake,Otter Tail
+East Lost (North Bay),56037801,,Otter Tail
+East Lost (South Bay),56037802,,Otter Tail
+Norway (East Bay),56056901,,Otter Tail
+Norway (West Bay),56056902,,Otter Tail
+North Lida,56074701,Pelican Rapids,Otter Tail
+South Lida,56074702,Pelican Rapids,Otter Tail
+Lizzie (north portion),56076001,Pelican Rapids,Otter Tail
+Rush-Lizzie(south portion),56076002,,Otter Tail
+Cross (Main Basin),60002702,,Polk
+Sather Main,61004701,Swift Falls,Pope
+Nelson (Main Lake),61010101,,Pope
+Keller (Main Bay),62001002,Maplewood,Ramsey
+Mallard Pond (North),62002001,North Oaks,Ramsey
+Mallard Pond (South),62002002,North Oaks,Ramsey
+Ox (south portion),62002501,Vadnais Heights,Ramsey
+Ox (north portion),62002502,Vadnais Heights,Ramsey
+Teal Pond (North),62002601,North Oaks,Ramsey
+Teal Pond (South),62002603,North Oaks,Ramsey
+Langton (North),62004901,,Ramsey
+Langton (South),62004902,,Ramsey
+North Long,62006701,,Ramsey
+South Long,62006702,,Ramsey
+Island (Basin S.of I-694),62007501,,Ramsey
+Island (Basin N.of I-694),62007502,,Ramsey
+Unnamed (north portion),62009801,,Ramsey
+Unnamed,66014201,,Rice
+North Stone,69002701,,St. Louis
+South Stone,69002702,,St. Louis
+Hegman,69007500,,St. Louis
+North Hegman,69007501,Ely,St. Louis
+South Hegman,69007502,Ely,St. Louis
+Island Lake Rsvr(W.Basin),69037201,,St. Louis
+Island Lake Rsvr(E.Basin),69037202,,St. Louis
+Pike Bay,69037803,,St. Louis
+Sabin,69043401,Aurora,St. Louis
+Wynne,69043402,Aurora,St. Louis
+Fish Lk Flowage (Main Bay),69049101,,St. Louis
+Fish Lk Flowage (East Bay),69049102,,St. Louis
+Longyear (North),69085701,,St. Louis
+Longyear (South),69085702,,St. Louis
+Long (Main Basin),69085901,,St. Louis
+Long (North Basin),69085902,,St. Louis
+Moran (North Basin),69093801,,St. Louis
+Moran (South Basin),69093802,,St. Louis
+St. Louis Bay,69129102,,St. Louis
+Unnamed (North Portion),70001101,,Scott
+Unnamed (South Portion),70001102,Deer Park,Scott
+North Twin,70025901,Glendale (Scott),Scott
+South Twin,70025902,Glendale (Scott),Scott
+High Island (Main Basin),72005001,,Sibley
+Great Northern,73008300,Cold Spring,Stearns
+Cedar Island (Main Bay),73013301,,Stearns
+Koronis (main lake),73020002,Paynesville,Stearns
+Melrose (Southeast Basin),73025101,,Stearns
+Melrose (Northwest Basin),73025102,,Stearns
+Long (Main Basin),77014901,,Todd
+Long (South Bay),77014902,,Todd
+Sauk (Southwest Bay),77015001,,Todd
+Sauk (North Bay),77015002,,Todd
+Elysian (Main Lake),81009501,Elysian,Waseca
+Loon (South Bay),82001501,,Washington
+Loon (Main Lake),82001502,,Washington
+Mud (main lake),82002602,Maple Island (Washington),Washington
+Big Marine - NE Bay,82005201,Scandia,Washington
+Big Marine - EC Bay,82005203,Scandia,Washington
+Big Marine (Main Lake),82005204,,Washington
+Big Marine (Ourlet Bay),82005205,,Washington
+Wilmes Lake North Portion,82009001,,Washington
+Wilmes Lake South Portion,82009002,,Washington
+Goose (North),82011301,,Washington
+Goose (South),82011302,,Washington
+Armstrong-North Portion,82011601,Lake Elmo,Washington
+Armstrong-South Portion,82011602,Oakdale,Washington
+Lost (North West Bay),82013401,,Washington
+Unnamed,82033400,Grant (Washington),Washington
+Winona (Southeast Bay),85001101,,Winona
+Winona (Northwest Bay),85001102,,Winona
+Pulaski (main bay),86005302,,Wright
+Ramsey (Main Lake),86012001,Maple Lake,Wright
+North Berthiaume,86013101,Buffalo,Wright
+South Berthiaume,86013102,Buffalo,Wright
+Upper Maple,86013401,Maple Lake,Wright
+Maple (Northeast Bay),86013403,,Wright
+Little Mary (South Bay),86013901,,Wright
+Little Mary (North Bay),86013902,,Wright
+Unnamed (South Portion),86022001,,Wright
+Spellman (North Basin),87006001,,Yellow Medicine
+Spellman (South Basin),87006002,,Yellow Medicine
+Davis (Main Bay),1007101,McGregor,Aitkin
+Cedar(West Bay),1020903,,Aitkin
+Cedar(West Bay),1020903,,Aitkin
+East Moore,2007501,Fridley,Anoka
+West Moore,2007502,Fridley,Anoka
+Floyd (south bay),3038702,,Becker
+Axberg (West Basin),3066002,,Becker
+Big Bass (west basin),4013201,Lavinia (Beltrami),Beltrami
+Big Bass (east basin),4013202,Lavinia (Beltrami),Beltrami
+Donovan (main bay),5000402,,Benton
+West Auburn,10004401,,Carver
+East Auburn,10004402,,Carver
+Wassermann West,10004802,,Carver
+Little Thunder (West Bay),11000901,,Cass
+Little Thunder (West Bay),11000901,,Cass
+Little Thunder (East Bay),11000902,,Cass
+Little Thunder (East Bay),11000902,,Cass
+Inguadona (N. Bay),11012001,,Cass
+Inguadona (S. Bay),11012002,,Cass
+Long (South West Bay),11014204,,Cass
+Long (South West Bay),11014204,,Cass
+Wabedo (North East Bay),11017101,,Cass
+Wabedo (North East Bay),11017101,,Cass
+Wabedo (South West Bay),11017102,,Cass
+Wabedo (South West Bay),11017102,,Cass
+Broadwater Bay,11020101,,Cass
+Leech (Kabekona Bay),11020302,,Cass
+Leech (Shingobee Bay),11020304,,Cass
+Sylvan (Southwest Bay),11030401,,Cass
+Sylvan (Southwest Bay),11030401,,Cass
+Sylvan (Northeast Bay),11030402,,Cass
+Sylvan (Northeast Bay),11030402,,Cass
+Big Portage (West Bay),11030801,,Cass
+Big Portage (West Bay),11030801,,Cass
+Big Portage (East Bay),11030802,,Cass
+Big Portage (East Bay),11030802,,Cass
+East Rush,13006901,Rush City,Chisago
+West Rush,13006902,Rush City,Chisago
+Goose (North Bay),13008301,,Chisago
+Goose (South Bay),13008302,,Chisago
+Upper West Four-Legged,15002801,,Clearwater
+Lower West Four-Legged,15002802,,Clearwater
+Long (west bay),15005001,,Clearwater
+Long (west bay),15005001,,Clearwater
+Long (main bay),15005002,,Clearwater
+Crooked (Sugar Bay),18004101,,Crow Wing
+Crooked (Main Bay),18004102,,Crow Wing
+Rabbit (East Portion),18009301,Cuyuna,Crow Wing
+Rabbit (West Portion),18009302,Cuyuna,Crow Wing
+East Mahnomen,18012601,,Crow Wing
+West Twin,18014801,,Crow Wing
+East Twin,18014802,,Crow Wing
+Twin (West Basin),18016701,,Crow Wing
+Twin (East Basin),18016702,,Crow Wing
+O'Brien (Southwest Bay),18022701,,Crow Wing
+O'Brien (Southwest Bay),18022701,,Crow Wing
+O'Brien (Northeast Bay),18022702,,Crow Wing
+O'Brien (Northeast Bay),18022702,,Crow Wing
+Horseshoe (East Bay),18025101,,Crow Wing
+Horseshoe (East Bay),18025101,,Crow Wing
+Horseshoe (West Bay),18025102,,Crow Wing
+Horseshoe (West Bay),18025102,,Crow Wing
+Eagle (Main Bay),18029601,,Crow Wing
+Eagle (West Bay),18029602,,Crow Wing
+Eagle (West Bay),18029602,,Crow Wing
+Eagle (East Bay),18029603,,Crow Wing
+Eagle (East Bay),18029603,,Crow Wing
+Pelican (NE Bay),18030801,,Crow Wing
+Cross Lake Reservoir (Southeast Bay),18031202,,Crow Wing
+Cross Lake Reservoir (Southeast Bay),18031202,,Crow Wing
+Cross Lake Reservoir (Unnamed Bay),18031203,,Crow Wing
+Gilbert (East Bay),18032001,,Crow Wing
+Gilbert (East Bay),18032001,,Crow Wing
+Gilbert (West Bay),18032002,,Crow Wing
+Gilbert (West Bay),18032002,,Crow Wing
+Gilbert (South Bay),18032003,,Crow Wing
+Marion (East Bay),19002601,,Dakota
+Marion (East Bay),19002601,,Dakota
+Marion (Middle Bay),19002602,,Dakota
+Marion (West Bay),19002603,,Dakota
+Marion (West Bay),19002603,,Dakota
+Latoka (North Bay),21010601,,Douglas
+Latoka (South Bay),21010602,,Douglas
+Lobster (East Bay),21014401,,Douglas
+Lobster (East Bay),21014401,,Douglas
+Lobster (West Bay),21014402,,Douglas
+Lobster (West Bay),21014402,,Douglas
+Crooked (Northwest Bay),21019901,,Douglas
+Crooked (Northwest Bay),21019901,,Douglas
+Crooked (East Crooked),21019902,,Douglas
+Fountain (East Bay),24001801,,Freeborn
+Fountain (East Bay),24001801,,Freeborn
+Fountain (West Bay),24001802,,Freeborn
+Fountain (West Bay),24001802,,Freeborn
+Fountain (North Bay),24001803,,Freeborn
+Unnamed (west portion),26004302,,Grant
+Southeast Anderson,27006202,Rowland,Hennepin
+Southwest Anderson,27006203,Rowland,Hennepin
+Shady Oak (North Bay),27008901,,Hennepin
+Shady Oak (Middle Bay),27008902,,Hennepin
+Shady Oak (South Bay),27008903,,Hennepin
+Rice - West Bay,27011602,,Hennepin
+Rice - West Bay,27011602,,Hennepin
+Rice - Outlet Bay,27011604,,Hennepin
+Minnetonka-Grays Bay,27013301,,Hennepin
+Minnetonka-Carsons Bay,27013303,,Hennepin
+Minnetonka-St. Albans Bay,27013304,,Hennepin
+Minnetonka-Halsteds Bay,27013309,,Hennepin
+Minnetonka-Crystal Bay,27013310,,Hennepin
+Minnetonka-Maxwell Bay,27013311,,Hennepin
+Minnetonka-Stubbs Bay,27013312,,Hennepin
+Minnetonka-West Arm,27013314,,Hennepin
+Minnetonka-Jennings Bay,27013315,,Hennepin
+Peter (North Bay),27014702,,Hennepin
+West Sarah,27019101,,Hennepin
+East Sarah,27019102,,Hennepin
+Unnamed(east portion),27043901,Corcoran,Hennepin
+Unnamed(west portion),27043902,Corcoran,Hennepin
+Loring (South Bay),27065502,,Hennepin
+Unnamed (East),27068701,,Hennepin
+Unnamed (West),27068702,,Hennepin
+Eleventh Crow Wing (East),29003602,,Hubbard
+East Crooked,29010101,Nevis,Hubbard
+West Crooked,29010103,Nevis,Hubbard
+Spider (NE/SW Bay),29011701,,Hubbard
+Spider (East Bay),29011702,,Hubbard
+Spider (East Bay),29011702,,Hubbard
+Mantrap (East Basin),29015101,,Hubbard
+Mantrap (Mirror Bay),29015103,,Hubbard
+Mantrap (West Arm),29015104,,Hubbard
+Mantrap (Home Bay),29015105,,Hubbard
+Peysenske (Main Bay),29016901,,Hubbard
+Peysenske (Main Bay),29016901,,Hubbard
+Peysenske (East Bay),29016902,,Hubbard
+Peysenske (East Bay),29016902,,Hubbard
+Unnamed (SW Portion),30005502,Cambridge,Isanti
+Blue (North Bay),30010701,,Isanti
+Blue (South Bay),30010702,,Isanti
+Twin (East Bay),31002601,,Itasca
+Twin (East Bay),31002601,,Itasca
+Twin (West Bay),31002602,,Itasca
+Twin (West Bay),31002602,,Itasca
+Swan (West Bay),31006701,,Itasca
+Swan (West Bay),31006701,,Itasca
+Swan (Southwest Bay),31006703,,Itasca
+Swan (Southwest Bay),31006703,,Itasca
+Long (Main Bay),31026601,Bigfork,Itasca
+Prairie (main bay),31038402,,Itasca
+Pokegama (Main Bay),31053201,,Itasca
+Cavanaugh,31057201,Cohasset,Itasca
+Little Cavanaugh,31057202,Cohasset,Itasca
+Cut Foot Sioux(Main Bay),31085701,,Itasca
+Cut Foot Sioux(East Bay),31085702,,Itasca
+Cut Foot Sioux(East Bay),31085702,,Itasca
+Fish (Bullhead Bay),32001802,,Jackson
+Wheeler (southeast bay),34005101,,Kandiyohi
+Wheeler (southeast bay),34005101,,Kandiyohi
+Wheeler (northeast bay),34005102,,Kandiyohi
+Wheeler (northeast bay),34005102,,Kandiyohi
+Crow River Mill Pond (East),34015803,,Kandiyohi
+"Wakanda, Lake (East Bay)",34016902,,Kandiyohi
+"Wakanda, Lake (East Bay)",34016902,,Kandiyohi
+Willmar (main bay),34018001,,Kandiyohi
+Willmar (south bay),34018002,,Kandiyohi
+Norway (Northwest),34025101,,Kandiyohi
+Unnamed (Center Bay),34047601,,Kandiyohi
+Unnamed (East Bay),34047602,,Kandiyohi
+Unnamed (East Bay),34047602,,Kandiyohi
+Lac qui Parle (SE Bay),37004601,,Lac Qui Parle
+Lac qui Parle (NW Bay),37004602,,Lac Qui Parle
+Unnamed-Northeast Portion,37013401,Madison,Lac Qui Parle
+Unnamed-Southwest Portion,37013402,Madison,Lac Qui Parle
+Crooked (East Bay),38002401,,Lake
+Crooked (East Bay),38002401,,Lake
+Crooked (West Bay),38002402,,Lake
+Crooked (West Bay),38002402,,Lake
+Jenny (West Bay),38019401,,Lake
+Jenny (West Bay),38019401,,Lake
+Lake of the Woods (Fourmile Bay),39000202,,Lake of the Woods
+East Jefferson,40009201,Marysburg,Le Sueur
+West Jefferson,40009202,Marysburg,Le Sueur
+Swede's Bay,40009203,Marysburg,Le Sueur
+Ferrell (East Portion),43011002,,McLeod
+Willmert (Main Bay),46001401,Fairmont,Martin
+Unnamed (west portion),46002801,,Martin
+Unnamed (east portion),46002802,,Martin
+Ripley (east portion),47013401,Litchfield,Meeker
+Ripley (west portion),47013402,Litchfield,Meeker
+Ocheda (West Basin),53002401,,Nobles
+Ocheda (Middle Bay),53002402,,Nobles
+Ocheda (East Basin),53002403,,Nobles
+East Leaf,56011602,Henning,Otter Tail
+Portage (main bay),56014001,Ottertail,Otter Tail
+Bull Head (main bay),56017101,Clitherall,Otter Tail
+Stuart (Little West Bay),56019102,,Otter Tail
+Stuart (Little West Bay),56019102,,Otter Tail
+Third Silver (Main Bay),56030204,Battle Lake,Otter Tail
+East Lost (North Bay),56037801,,Otter Tail
+East Lost (North Bay),56037801,,Otter Tail
+East Lost (South Bay),56037802,,Otter Tail
+East Lost (South Bay),56037802,,Otter Tail
+West McDonald,56038602,Vergas,Otter Tail
+Norway (East Bay),56056901,,Otter Tail
+Norway (East Bay),56056901,,Otter Tail
+Norway (West Bay),56056902,,Otter Tail
+Norway (West Bay),56056902,,Otter Tail
+West Olaf,56095001,Pelican Rapids,Otter Tail
+East Olaf,56095002,Norwegian Grove,Otter Tail
+Keller (Main Bay),62001002,Maplewood,Ramsey
+East Vadnais,62003801,Vadnais Heights,Ramsey
+West Vadnais,62003802,Cardigan Junction,Ramsey
+Unnamed (east),62009301,,Ramsey
+Unnamed (west),62009302,,Ramsey
+East Twin,69016301,,St. Louis
+West Twin,69016302,,St. Louis
+East Vermilion,69037801,,St. Louis
+West Vermilion,69037802,,St. Louis
+Pike Bay,69037803,,St. Louis
+Fish Lk Flowage (Main Bay),69049101,,St. Louis
+Fish Lk Flowage (East Bay),69049102,,St. Louis
+Fish Lk Flowage (East Bay),69049102,,St. Louis
+West Sturgeon,69093903,Chisholm,St. Louis
+St. Louis Bay,69129102,,St. Louis
+Pit 5N East,69143901,Ridge,St. Louis
+Pit 5N West,69143902,Ridge,St. Louis
+Unnamed (West Portion),70018101,,Scott
+Unnamed (west portion),70032201,,Scott
+Unnamed (east portion),70032202,,Scott
+Unnamed (east portion),72004601,,Sibley
+Cedar Island (Main Bay),73013301,,Stearns
+Cedar Island (East Lk),73013304,,Stearns
+Melrose (Southeast Basin),73025101,,Stearns
+Melrose (Northwest Basin),73025102,,Stearns
+Oliver (east portion),76014601,Appleton,Swift
+Oliver (west portion),76014602,Appleton,Swift
+Long (South Bay),77014902,,Todd
+Sauk (Southwest Bay),77015001,,Todd
+Sauk (Southwest Bay),77015001,,Todd
+Sauk (North Bay),77015002,,Todd
+West Newton Chute,79000104,West Newton,Wabasha
+Jim Cook (west),80002701,Menahga,Wadena
+Jim Cook (east),80002702,Menahga,Wadena
+Loon (South Bay),82001501,,Washington
+Big Marine - NE Bay,82005201,Scandia,Washington
+Big Marine - EC Bay,82005203,Scandia,Washington
+Big Marine (Ourlet Bay),82005205,,Washington
+Lost (North West Bay),82013401,,Washington
+Lost (North West Bay),82013401,,Washington
+Winona (Southeast Bay),85001101,,Winona
+Winona (Southeast Bay),85001101,,Winona
+Winona (Northwest Bay),85001102,,Winona
+Winona (Northwest Bay),85001102,,Winona
+Pulaski (main bay),86005302,,Wright
+Maple (Northeast Bay),86013403,,Wright
+Maple (Northeast Bay),86013403,,Wright
+Little Mary (South Bay),86013901,,Wright
+Little Mary (North Bay),86013902,,Wright
+Clearwater (East),86025201,Annandale,Wright
+Clearwater (West),86025202,Annandale,Wright
+Southeast Anderson,27006202,Rowland,Hennepin

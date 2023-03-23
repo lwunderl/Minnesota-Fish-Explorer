@@ -4,7 +4,12 @@ import re
 def main():
     file_location = "lake_id_list.txt"
     lake_list = txt_filter(file_location)
+    #lake_list = lake_list_cleaner(lake_list)
     lake_list_csv(lake_list, "lake_id_list")
+
+#drop duplicates only works without the "other info" column
+def lake_list_cleaner(l):
+    return [dict(t) for t in {tuple(d.items()) for d in l}]
 
 #write csv
 def lake_list_csv(lake_list, file_name):

@@ -14040,3 +14040,23 @@ Yellow Medicine 87001900 Tyson Natural Environment Natural Environment
 Yellow Medicine 41010900 Unnamed Natural Environment Natural Environment
 Yellow Medicine 87011600 Victors Slough Natural Environment Natural Environment
 Yellow Medicine 87003000 Wood Natural Environment Natural Environment
+lakeofthewoods 39000202
+lakeofthewoods 39000201
+redlake 04003502
+redlake 04003501
+lakeofthewoods 39000202
+lakeofthewoods 39000201
+leech 11020303
+leech 11020302
+leech 11020301
+leech 11020304
+gull 16063201
+pelican 18030801
+pelican 18030802
+vermilion 69037801
+vermilion 69037802
+superior 69129101
+pool 13005903
+pool 13005901
+pool 37035100
+pool 37035200

@@ -7,7 +7,7 @@ def main():
     fish_catch_summary_csv_header()
     fish_length_summary_csv_header()
     i = 0
-    with open("lake_id_info/lake_id_list.csv", newline='') as csvfile:
+    with open("lake_info/lake_id_info/most_accurate_lake_list.csv", newline='') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
             time.sleep(10)

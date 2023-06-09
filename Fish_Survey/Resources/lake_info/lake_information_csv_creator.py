@@ -35,7 +35,7 @@ def get_was_info(lake_id):
     
 def get_lake_summary_data(lake_info, was_info):
     lake_summary = {}
-    lake_summary["Lake ID"] = lake_info["results"][0]["id"]
+    lake_summary["lake_ID"] = lake_info["results"][0]["id"]
     lake_summary["Lake Name"] = lake_info["results"][0]["name"]
     lake_summary["Lake County"] = lake_info["results"][0]["county"]
     lake_summary["Nearest Town"] = lake_info["results"][0]["nearest_town"]
@@ -53,7 +53,7 @@ def get_lake_summary_data(lake_info, was_info):
 def lake_summary_csv_header():
     with open(f'lake_information.csv', 'a', newline='') as csvfile:
         fieldnames = [
-            "Lake ID",
+            "lake_ID",
             "Lake Name",
             "Lake County",
             "Nearest Town",
@@ -70,7 +70,7 @@ def lake_summary_csv_header():
 def lake_summary_csv(lake_list):
     with open(f'lake_information.csv', 'a', newline='') as csvfile:
         fieldnames = [
-            "Lake ID",
+            "lake_ID",
             "Lake Name",
             "Lake County",
             "Nearest Town",

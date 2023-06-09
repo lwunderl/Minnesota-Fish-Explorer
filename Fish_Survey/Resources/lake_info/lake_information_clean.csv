@@ -1,4 +1,4 @@
-Lake ID,Lake Name,Lake County,Nearest Town,Lake Area,Littoral Area,Lake Depth,Mean Depth,Water Access Sites,Longitude,Latitude
+lake_ID,Lake Name,Lake County,Nearest Town,Lake Area,Littoral Area,Lake Depth,Mean Depth,Water Access Sites,Longitude,Latitude
 01004000,Aitkin,Aitkin,Libby,658.82,453.0,35.0,0.0,[],-93.289871,46.804042
 01003100,Anderson,Aitkin,Sheshebee,91.34,83.0,16.0,3.0,[],-93.232645,46.737721
 01016900,Bachelor,Aitkin,Aitkin,53.56,30.0,47.0,12.0,[],-93.72684,46.473611

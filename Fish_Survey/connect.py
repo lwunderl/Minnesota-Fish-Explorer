@@ -1,7 +1,5 @@
+#import dependencies
 import psycopg2
-
-#from sqlalchemy import create_engine
-
 from config import password
 
 def main():
@@ -29,8 +27,6 @@ def connect():
     cur.close()
     conn.close()
     print("PostgreSQL database is closed")
-
-#engine = create_engine("")
 
 if __name__ == "__main__":
     main()

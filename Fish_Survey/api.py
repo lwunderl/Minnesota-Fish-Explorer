@@ -1,4 +1,5 @@
 import psycopg2
+import numpy as np
 from flask import Flask
 from flask_cors import CORS
 from config import password, fish_db
@@ -58,6 +59,16 @@ fish_info = dict(fish_info)
 cur.close()
 conn.close()
 
+#convert coordinate lat or lon from degrees to radians; coordinate = -94.728528
+def get_radians(coordinate):
+    radian = coordinate*np.pi/180
+    return radian
+
+#calculate distance between 2 geographic degree points; lon1 = -94.728528 , lat1 = 44.308025
+def get_distance(lat1, lon1, lat2, lon2):
+    distance = np.arccos(np.sin(get_radians(lat1))*np.sin(get_radians(lat2)) + np.cos(get_radians(lat1))*np.cos(get_radians(lat2)) * np.cos(get_radians(lon2)-get_radians(lon1)))*3958.8
+    return distance
+
 #create variable for the Flask
 app = Flask(__name__)
 CORS(app)
@@ -71,6 +82,7 @@ def welcome():
         f"/api/v1.0/cities<br/>"
         f"/api/v1.0/wateraccess<br/>"
         f"/api/v1.0/fish<br/>"
+        f"/api/v1.0/lake_results/city_name/distance_in_miles<br/>"
     )
 
 @app.route("/api/v1.0/lakes")
@@ -88,6 +100,20 @@ def get_was():
 @app.route("/api/v1.0/fish")
 def get_fish():
     return fish_info
+
+@app.route("/api/v1.0/lake_results/<city>/<distance>")
+def get_lake_results(city, distance):
+    lake_list = []
+    for row in city_api:
+        if row["city_name"] == city.title():
+            city_longitude = float(row["city_longitude"])
+            city_latitude = float(row["city_latitude"])
+            for lake in lake_api:
+                lake_latitude = float(lake["lake_latitude"])
+                lake_longitude = float(lake["lake_longitude"])
+                if get_distance(city_latitude, city_longitude, lake_latitude, lake_longitude) < float(distance):
+                    lake_list.append(lake)
+    return [{"search_results": len(lake_list)},lake_list]
 
 if __name__ == "__main__":
     app.run(debug=True)

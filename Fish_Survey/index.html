@@ -26,24 +26,31 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-2">
-            <div class="well">
-              <h5>Lake ID number:</h5>
-              <select id="selDataset" onchange="optionChanged(this.value)">
-              </select>
+          <div class="col-md-6">
+            <div class="card-body" style="padding: 0px 5px 20px 5px">
+              <h5>Choose Parameters for Search</h5>
+              <h5>Choose City:</h5>
+              <select id="selCity" onchange="optionChanged(this.value)"></select>
+              <h5>Choose Species:</h5>
+              <select id="selSpecies" onchange="optionChanged(this.value)"></select>
+              <h5>Choose Distance:</h5>
+              <select id="selDistance" onchange="optionChanged(this.value)"></select>
             </div>
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Fish Info</h3>
-              </div>
-              <div id="sample-metadata" class="panel-body"></div>
+            <div class="col-md-12">
+              <table class="table">
+                <thead id="tableHeader">
+                </thead>
+                <tbody id="lakeResults">
+                </tbody>
+              </table>
+          </div>
+          <div class="row">  
+            <div class="col-md-6">
+              <div id="box1"></div>
             </div>
-          </div>
-          <div class="col-md-5">
-            <div id="box1"></div>
-          </div>
-          <div class="col-md-5">
-            <div id="hist1"></div>
+            <div class="col-md-6">
+              <div id="hist1"></div>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -52,8 +59,8 @@
           </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-            <div id="map"></div>
+            <div class="col-md-12 d-flex justify-content-center">
+            <div id="map" style = "margin: 5px; height: 55vh; width: 90vh"></div>
             </div>
         </div>
     </div>

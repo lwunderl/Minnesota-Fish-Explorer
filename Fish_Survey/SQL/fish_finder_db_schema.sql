@@ -3,8 +3,8 @@ DROP TABLE if EXISTS water_access_info, lake_info, fish_info, city_info;
 
 --Create Fish ID table
 CREATE TABLE fish_info (
-    fish_description VARCHAR(30),
-	fish_id VARCHAR(3) PRIMARY KEY
+    fish_id VARCHAR(3) PRIMARY KEY,
+    fish_description VARCHAR(30)
 );
 
 --Create WAS table

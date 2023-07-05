@@ -7,13 +7,9 @@ const fishUrl = "http://127.0.0.1:5000/api/v1.0/fish";
 
 const wasUrl = "http://127.0.0.1:5000/api/v1.0/wateraccess";
 
-let city = "Adrian"
-let distance = 20
-let lakeResultUrl = `http://127.0.0.1:5000/api/v1.0/lake_results/${city}/${distance}`;
-
-d3.json(lakeResultUrl).then(function (data){
-    console.log(data)
-});
+d3.json(lakeUrl).then(function (data){
+        console.log(data)
+    });
 
 function loadCityDropDown(data) {
     //populate city drop down menu 
@@ -31,7 +27,7 @@ function loadCityDropDown(data) {
 
 function loadFishDropDown(data){
     //populate species drop down menu
-    let speciesMenu = Object.keys(data)
+    let speciesMenu = Object.values(data)
     for (let i = 0; i < data.length; i++) {
         speciesMenu.push(data[i]);
     }
@@ -46,7 +42,7 @@ function loadFishDropDown(data){
 function loadDistanceDropDown(){
     //populate distance drop down menu
     let distanceDropDown = d3.select("#selDistance");
-    let distanceMenu = [5,10,20,30,45];
+    let distanceMenu = [5,10,20,30];
     for (let i = 0; i < distanceMenu.length; i++) {
         distanceDropDown.append("option").text(distanceMenu[i]);
     }
@@ -120,20 +116,21 @@ function createFishingMap(currentCity, currentDistance) {
             let mapCenter = []
             for (let i = 0; i < data.length; i++) {
                 if (data[i].city_name == currentCity) {
-                    mapCenter.push(data[i].city_latitude, data[i].city_longitude)
+                    mapCenter.push(data[i].city_latitude, data[i].city_longitude);
                 }
             }
-        //create myMap variable
-        myMap = L.map("map", {
-            center: mapCenter,
-            zoom: 12,
-            layers: [streetMap, lakes]
+            //create myMap variable
+            myMap = L.map("map", {
+                center: mapCenter,
+                zoom: 12,
+                layers: [streetMap, lakes]
+                });
             });
-        })
-
-        })
+        });
 
 };
+
+function cpueChart(currentSpecies) {};
 
 d3.json(cityUrl).then(function (data){
     loadCityDropDown(data)

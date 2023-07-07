@@ -112,6 +112,7 @@ def get_fish_length_summary_data(lake_info):
             fish_length_list.append(fish_length_summary)
     return fish_length_list
 
+#create list of lakes by distance from chosen city
 def get_lake_list(city, distance):
     lake_list = []
     for row in city_api:
@@ -139,7 +140,7 @@ def welcome():
         f"/api/v1.0/wateraccess<br/>"
         f"/api/v1.0/fish<br/>"
         f"/api/v1.0/lake_results/city_name/distance_in_miles<br/>"
-        f"/api/v1.0/survey_results/city_name/distance_in_miles/species_code"
+        #f"/api/v1.0/survey_results/city_name/distance_in_miles/species_code"
     )
 
 @app.route("/api/v1.0/lakes")
@@ -160,9 +161,39 @@ def get_fish():
 
 @app.route("/api/v1.0/lake_results/<city>/<distance>")
 def get_lake_results(city, distance):
-    lake_list = get_lake_list(city, distance)
-    return [{"lake_results": len(lake_list)},lake_list]
 
+    #get data from 
+    lake_list = get_lake_list(city, distance)
+
+    #get data from api
+    fish_data = [get_catch_info(x["lake_id"]) for x in lake_list if get_catch_info(x["lake_id"])["status"] == "SUCCESS"]
+
+    #get cpue data from api
+    cpue_list = []
+    for _ in range(len(fish_data)):
+        catch = get_fish_catch_summary_data(fish_data[_])
+        for _ in range(len(catch)):
+            sample = catch[_]
+            cpue_list.append(sample)
+
+    #get fish length data from api
+    length_list = []
+    for _ in range(len(fish_data)):
+        catch = get_fish_length_summary_data(fish_data[_])
+        for _ in range(len(catch)):
+            sample = catch[_]
+            fish_count = []
+            for _ in sample["fish_count"]:
+                fish_count.extend([_[0]]*_[1])
+            fish_count_clean = [x for x in fish_count if x > 2]
+            sample["fish_count"] = fish_count_clean
+            length_list.append(sample)
+
+    return [{"total_lake_results": len(lake_list), "lake_results": lake_list},
+            {"total_cpue_results": len(cpue_list), "cpue_results": cpue_list}, 
+            {"total_length_results": len(length_list), "length_results": length_list}]
+
+"""
 @app.route("/api/v1.0/survey_results/<city>/<distance>/<species>")
 def get_survey_results(city, distance, species):
     #set species variable to uppercase
@@ -234,6 +265,7 @@ def get_survey_results(city, distance, species):
             {"total_length_results": len(length_list), "length_results": length_list}, 
             {"cpue_statistics_results": len(cpue_statistics), "cpue_statisitcs": cpue_statistics},
             {"length_statistics_results": len(length_statistics), "length_statistics": length_statistics}]
+"""
 
 if __name__ == "__main__":
     app.run(debug=True)

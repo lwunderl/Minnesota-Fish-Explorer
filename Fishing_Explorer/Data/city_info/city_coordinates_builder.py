@@ -25,7 +25,7 @@ def main():
             city_coordinates.append([row[0], lon, lat])
 
             #write coordinates list to csv
-            with open("MN_cities_coordinates.csv", "a", newline="") as file:
+            with open("MN_cities_info.csv", "a", newline="") as file:
                 writer = csv.writer(file, delimiter=",")
                 for _ in range(len(city_coordinates)):
                     writer.writerow(city_coordinates[_])

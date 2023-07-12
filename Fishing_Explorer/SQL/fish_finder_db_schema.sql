@@ -67,7 +67,7 @@ CREATE TABLE cpue_info (
     count_upper_quartile DECIMAL,
     weight_lower_quartile DECIMAL,
     weight_upper_quartile DECIMAL,
-    FOREIGN KEY (lake_id) REFERENCES lake_info(lake_id)
+    FOREIGN KEY (lake_id) REFERENCES lake_info(lake_id),
     FOREIGN KEY (species) REFERENCES fish_info(fish_id)
 );
 
@@ -76,13 +76,13 @@ CREATE TABLE length_info (
     length_id SERIAL PRIMARY KEY,
     lake_id VARCHAR(10),
     species VARCHAR(3),
-    fish_count VARCHAR(500),
+    fish_count VARCHAR,
     maximum_length INTEGER,
     minimum_length INTEGER,
     survey_id VARCHAR(20),
     survey_date DATE,
     average_length DECIMAL,
-    FOREIGN KEY (lake_id) REFERENCES lake_info(lake_id)
+    FOREIGN KEY (lake_id) REFERENCES lake_info(lake_id),
     FOREIGN KEY (species) REFERENCES fish_info(fish_id)
 );
 

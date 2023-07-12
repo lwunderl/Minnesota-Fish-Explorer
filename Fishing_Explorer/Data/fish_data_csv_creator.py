@@ -64,7 +64,7 @@ def get_fish_catch_summary_data(lake_info):
 
 #write the header of the .csv file
 def fish_catch_summary_csv_header():
-    with open(f'fish_catch_info/fish_catch.csv', 'a', newline='') as csvfile:
+    with open(f'fish_cpue_info/fish_cpue.csv', 'a', newline='') as csvfile:
         fieldnames = [
             'lake_id',
             'cpue',
@@ -84,7 +84,7 @@ def fish_catch_summary_csv_header():
 
 #write the rows of the .csv file
 def fish_catch_summary_csv(catch_list):
-    with open(f'fish_catch_info/fish_catch.csv', 'a', newline='') as csvfile:
+    with open(f'fish_cpue_info/fish_cpue.csv', 'a', newline='') as csvfile:
         fieldnames = [
             'lake_id',
             'cpue',

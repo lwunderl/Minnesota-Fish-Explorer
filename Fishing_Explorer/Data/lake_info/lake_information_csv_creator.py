@@ -8,7 +8,7 @@ def main():
     with open("lake_id_info/lake_id_list.csv", newline='') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
-            time.sleep(5)
+            time.sleep(2)
             i += 1
             lake_id = row[0]
             lake_info = get_lake_info(lake_id)

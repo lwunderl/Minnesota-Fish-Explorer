@@ -157,7 +157,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 02001200,Cedar,Anoka,,0.0,0.0,0.0,0.0,[],0.0,0.0
 02000600,Centerville,Anoka,Centerville (Anoka),473.86,276.0,19.0,12.0,['was01709'],-93.069957,45.163308
 02001800,Columbus,Anoka,Forest Lake,0.0,0.0,0.0,0.0,[],-93.059097,45.246862
-02004200,Coon,Anoka,Soderville,1481.24,1098.2,27.0,10.0,"['was02807', 'was01699']",-93.165141,45.307192
+02004200,Coon,Anoka,Soderville,1481.24,1098.2,27.0,10.0,"['was01699', 'was02807']",-93.165141,45.307192
 02007000,Coopers,Anoka,Coopers Corner,0.0,0.0,0.0,0.0,[],-93.242386,45.395677
 02008400,Crooked,Anoka,Andover,114.93,86.0,26.0,0.0,['was01711'],-93.342993,45.211113
 02001900,Crossways,Anoka,Centerville (Anoka),0.0,0.0,0.0,0.0,[],-93.070138,45.228196
@@ -279,7 +279,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 56036800,Graham,Otter Tail,Frazee,216.8,126.0,34.0,0.0,[],-95.727721,46.711942
 03013400,Green Water,Becker,Pine Point,73.57,16.0,57.0,0.0,[],-95.494639,46.983994
 03017700,Hanson,Becker,Rochert,35.03,16.8,29.0,0.0,['was01493'],-95.66015,46.88435
-03019500,Height of Land,Becker,Detroit Lakes,3794.79,3190.0,21.0,7.6,"['was01490', 'was02529', 'was01489']",-95.606637,46.892166
+03019500,Height of Land,Becker,Detroit Lakes,3794.79,3190.0,21.0,7.6,"['was01489', 'was01490', 'was02529']",-95.606637,46.892166
 03003200,Hernando DeSoto,Becker,Goldenrod,171.18,104.0,22.0,0.0,[],-95.224181,47.145678
 03028300,Howe,Becker,Rochert,0.0,0.0,0.0,0.0,['was01494'],-95.722123,46.82293
 03024000,Hubbel Pond,Becker,Rochert,0.0,0.0,0.0,0.0,[],-95.666314,46.868822
@@ -535,7 +535,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 04004800,Windigo,Beltrami,Cass Lake,195.05,129.0,25.0,0.0,[],-94.568114,47.418266
 04007900,Wolf,Beltrami,Bemidji,1073.39,390.0,57.0,0.0,['was00383'],-94.690115,47.418521
 05000400,Donovan,Benton,Cable,0.0,0.0,0.0,0.0,[],-94.060844,45.572812
-05001300,Little Rock,Benton,Rice,1310.66,1240.12,17.0,8.0,"['was01289', 'was01290', 'was02972', 'was02451']",-94.168309,45.726824
+05001300,Little Rock,Benton,Rice,1310.66,1240.12,17.0,8.0,"['was01289', 'was01290', 'was02451', 'was02972']",-94.168309,45.726824
 05000700,Mayhew,Benton,Mayhew,127.98,66.0,20.0,11.5,['was02438'],-94.095415,45.704369
 05000200,Unnamed,Benton,Duelm,0.0,0.0,0.0,0.0,[],0.0,0.0
 05001100,Unnamed,Benton,,0.0,0.0,0.0,0.0,[],0.0,0.0
@@ -544,7 +544,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 06017000,Barry,Big Stone,Barry,398.07,398.07,8.8,6.5,['was02798'],-96.583303,45.57115
 06011500,Bassett Slough,Big Stone,Clinton,0.0,0.0,0.0,0.0,[],-96.412071,45.414399
 06009000,Bentsen,Big Stone,,0.0,0.0,0.0,0.0,[],0.0,0.0
-06015200,Big Stone,Big Stone,Ortonville,11983.83,4795.29,16.0,11.0,"['was02782', 'was01655', 'was01663', 'was02786', 'was02787', 'was01665', 'was01110', 'was01374']",-96.627755,45.427555
+06015200,Big Stone,Big Stone,Ortonville,11983.83,4795.29,16.0,11.0,"['was01110', 'was02782', 'was01655', 'was01663', 'was02786', 'was02787', 'was01665', 'was01374']",-96.627755,45.427555
 06012000,Cup,Big Stone,Clinton,0.0,0.0,0.0,0.0,[],-96.442227,45.486336
 06013800,East Toqua,Big Stone,Graceville,436.65,436.65,9.0,6.0,"['was01664', 'was03052']",-96.443648,45.561442
 06012900,Eli,Big Stone,Clinton,162.2,162.2,5.0,0.0,[],-96.430317,45.463548
@@ -610,7 +610,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 07012400,Lieberg,Blue Earth,Butternut,0.0,0.0,0.0,0.0,[],-94.312602,44.153189
 07010100,Lily,Blue Earth,Lake Crystal,0.0,0.0,0.0,0.0,[],-94.222843,44.1141
 07009600,Loon,Blue Earth,Lake Crystal,808.62,808.62,7.0,0.0,['was02406'],-94.177551,44.098238
-07007900,Lura,Blue Earth,Mapleton,1358.6,1358.59,9.0,5.0,"['was00796', 'was00797', 'was02303', 'was00802']",-94.024382,43.866796
+07007900,Lura,Blue Earth,Mapleton,1358.6,1358.59,9.0,5.0,"['was02303', 'was00796', 'was00797', 'was00802']",-94.024382,43.866796
 07004400,Madison,Blue Earth,Madison Lake,1447.15,722.0,59.0,0.0,"['was00782', 'was02401', 'was00783', 'was00784']",-93.799732,44.186213
 07009700,Mills,Blue Earth,Lake Crystal,237.08,237.08,7.0,6.0,['was00799'],-94.148319,44.082883
 22003300,Minnesota,Faribault,Minnesota Lake,0.0,0.0,0.0,0.0,"['was00646', 'was02351']",-93.860195,43.834132
@@ -655,7 +655,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 09003900,Eddy,Carlton,Barnum,23.97,19.0,37.0,0.0,[],-92.711359,46.476141
 09001500,Ellstrom,Carlton,Atkinson,0.0,0.0,0.0,0.0,[],-92.552468,46.566451
 09001400,Flodin,Carlton,Atkinson,0.0,0.0,0.0,0.0,[],-92.550784,46.572927
-09000200,Forbay,Carlton,Brownell,34.73,27.0,16.0,0.0,[],-92.359759,46.661741
+09000200,Forbay,Carlton,Brownell,34.73,27.0,34.0,0.0,[],-92.359759,46.661741
 09000300,Graham,Carlton,Holyoke,34.17,31.4,21.0,0.0,['was01137'],-92.459498,46.447035
 09003800,Hanging Horn,Carlton,Barnum,408.66,86.0,80.0,0.0,"['was02738', 'was03071']",-92.694491,46.477835
 09001000,Hay,Carlton,Wrenshall,140.05,122.0,14.0,3.9,['was01620'],-92.46479,46.599002
@@ -797,7 +797,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 11028900,Cedar,Cass,Whipholt,135.16,72.0,42.0,0.0,[],-94.322908,47.032329
 11048100,Cedar,Cass,Walker,36.28,36.28,15.0,0.0,[],-94.647759,47.118335
 11014100,Charles,Cass,Wabedo,0.0,0.0,0.0,0.0,[],-94.153471,46.912554
-11026300,Child,Cass,Longville,285.04,158.0,29.0,0.0,[],-94.342239,46.946396
+11026300,Child,Cass,Longville,285.04,158.0,29.0,0.0,['was03108'],-94.342239,46.946396
 11045700,Chub,Cass,Hackensack,0.0,0.0,0.0,0.0,[],-94.605501,46.928097
 11034900,Clam,Cass,Mildred,0.0,0.0,0.0,0.0,[],-94.442623,46.730203
 11006700,Coffin,Cass,Outing,0.0,0.0,0.0,0.0,[],-93.967782,46.916601
@@ -826,7 +826,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 11037900,Fish,Cass,Hackensack,35.05,30.5,43.0,0.0,[],-94.488935,46.945721
 11043700,Fish,Cass,Poplar,0.0,0.0,0.0,0.0,['was02562'],-94.62411,46.65572
 11035100,Five Point,Cass,Hackensack,250.65,88.0,37.0,0.0,['was02884'],-94.448986,46.879229
-11004100,Folston,Cass,Remer,22.22,22.22,7.0,0.0,[],-93.90051,47.090131
+11004100,Folston,Cass,Remer,22.22,22.22,7.0,0.0,['was03107'],-93.90051,47.090131
 11039800,Four-One-Eight,Cass,Hackensack,12.12,0.0,45.0,0.0,[],-94.479579,46.984615
 11046500,Fourth,Cass,Walker,58.36,0.0,65.0,0.0,[],-94.615665,47.061003
 11047500,Gadbolt,Cass,Walker,67.7,67.7,15.0,0.0,['was01535'],-94.592223,47.014873
@@ -854,7 +854,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 11028400,Horseshoe,Cass,Whipolt,127.36,127.36,12.0,7.3,[],-94.332156,47.04908
 11035800,Horseshoe,Cass,Backus,260.32,80.0,51.0,0.0,['was01534'],-94.473803,46.851054
 11037700,Horseshoe,Cass,Hackensack,0.0,0.0,0.0,0.0,[],-94.44632,46.943642
-11039400,Hovde,Cass,Walker,132.96,116.0,26.0,0.0,[],-94.448788,47.013246
+11039400,Hovde,Cass,Walker,132.96,116.0,26.0,0.0,['was03109'],-94.448788,47.013246
 11047200,Howard,Cass,Akeley,385.58,99.4,60.0,0.0,[],-94.652283,46.99495
 11017000,Hunter,Cass,Wabedo,181.82,52.0,48.0,0.0,[],-94.227602,46.924844
 11012000,Inguadona,Cass,Longville,1132.93,565.0,79.0,20.3,['was02883'],-94.133682,46.977633
@@ -880,7 +880,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 11005300,Lawrence,Cass,Outing,224.91,87.0,71.0,0.0,['was00715'],-93.927222,46.820658
 11003700,Leavitt,Cass,Mae,121.53,38.0,60.0,0.0,['was02456'],-93.905676,46.834126
 11045500,Lee,Cass,Oshawa (Cass),20.9,13.4,24.0,0.0,[],-94.59511,46.845451
-11020300,Leech,Cass,Walker,103039.6,57994.0,150.0,18.5,"['was01087', 'was02469', 'was00719', 'was02369', 'was00718', 'was00723', 'was02374', 'was00638', 'was00641', 'was00098', 'was00529', 'was03058']",-94.442163,47.175434
+11020300,Leech,Cass,Walker,103039.6,57994.0,150.0,18.5,"['was02469', 'was01087', 'was02369', 'was00718', 'was00719', 'was00638', 'was00641', 'was00723', 'was02374', 'was00529', 'was00098', 'was03058']",-94.442163,47.175434
 11036700,Lind,Cass,Backus,439.96,249.0,27.0,0.0,['was01081'],-94.476435,46.820497
 11005400,Little Andrus,Cass,Outing,27.21,14.0,37.0,14.0,[],-94.007751,46.83043
 11006300,Little Bass,Cass,Inguadona,138.87,67.0,30.0,0.0,[],-94.011028,46.960144
@@ -924,7 +924,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 11015600,Louise,Cass,Backus,58.85,34.4,26.0,10.0,[],-94.254624,46.830642
 11009800,Lower Menton,Cass,Elevenmile Corner,0.0,0.0,0.0,0.0,[],-93.965704,47.1727
 11008000,Lower Milton,Cass,Elevenmile Corner,78.98,39.0,47.0,0.0,[],-93.939099,47.141525
-11031300,Lower Sucker,Cass,Cass Lake,591.84,301.0,35.0,0.0,[],-94.426652,47.32983
+11031300,Lower Sucker,Cass,Cass Lake,591.84,301.0,35.0,0.0,['was03110'],-94.426652,47.32983
 11012900,Lower Trelipe,Cass,Longville,618.01,355.0,32.0,0.0,['was02463'],-94.070262,46.991135
 11031400,Lydick,Cass,Bald Eagle Center,67.92,39.0,20.0,0.0,[],-94.417954,47.396099
 11012100,Mabel,Cass,Remer,183.99,191.72,14.0,0.0,['was01090'],-94.078018,47.048814
@@ -953,7 +953,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 11020000,Mule,Cass,Longville,524.58,182.0,47.0,0.0,"['was00513', 'was01322']",-94.263986,46.911844
 11047900,Muskrat,Cass,Hackensack,0.0,0.0,0.0,0.0,[],-94.597168,46.983991
 11044900,North Haynes,Cass,Chamberlain,0.0,0.0,0.0,0.0,[],-94.634859,46.882895
-11030700,Norway,Cass,Pine River,514.89,514.89,12.0,0.0,"['was00722', 'was00640']",-94.398897,46.738826
+11030700,Norway,Cass,Pine River,514.89,514.89,12.0,0.0,"['was00640', 'was00722']",-94.398897,46.738826
 31077500,No-ta-she-bun,Itasca,Remer,239.16,72.0,45.0,0.0,['was01091'],-93.772516,47.15277
 11013700,Nushka,Cass,Bena,0.0,0.0,0.0,0.0,[],-94.092622,47.329018
 11007400,Ododikossi,Cass,Remer,0.0,0.0,0.0,0.0,[],-94.00237,47.040134
@@ -1215,14 +1215,14 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 15014900,Pine,Clearwater,Gonvick,1236.18,1238.4,15.0,9.0,"['was02376', 'was00528']",-95.526581,47.691913
 15011600,Rock,Clearwater,Elbow Lake Village,0.0,0.0,0.0,0.0,['was00400'],-95.482241,47.203782
 15007500,Rockstad,Clearwater,Zerkel,141.52,122.0,18.0,0.0,['was00399'],-95.390552,47.29219
-44000100,Roy,Mahnomen,Zerkel,695.44,638.0,16.0,0.0,[],-95.552757,47.31719
+44000100,Roy,Mahnomen,Zerkel,695.44,638.0,16.0,0.0,['was03117'],-95.552757,47.31719
 15014000,Second,Clearwater,Ebro,72.29,17.0,47.0,0.0,['was00386'],-95.474287,47.518526
 15008400,Solberg,Clearwater,Leonard,0.0,0.0,0.0,0.0,['was00380'],-95.313607,47.624207
 15003500,Spike,Clearwater,Leonard,0.0,0.0,0.0,0.0,['was02024'],-95.276541,47.737405
 15014100,Third,Clearwater,Ebro,0.0,0.0,0.0,0.0,[],-95.518662,47.52345
 15000800,Twin,Clearwater,Lake Itasca,92.02,46.0,45.0,0.0,[],-95.282292,47.204125
 15002100,Unnamed,Clearwater,Alida,0.0,0.0,0.0,0.0,[],0.0,0.0
-15005900,Upper Rice,Clearwater,Alida,1526.72,1526.72,13.0,6.0,['was00387'],-95.294644,47.39518
+15005900,Upper Rice,Clearwater,Alida,1526.72,1526.72,13.0,6.0,"['was00387', 'was03116']",-95.294644,47.39518
 15006000,Walker Brook,Clearwater,Shevlin,95.24,26.0,45.0,0.0,['was02020'],-95.299101,47.491438
 15012800,Waptus,Clearwater,Zerkel,51.87,24.0,45.0,0.0,['was01478'],-95.444372,47.256318
 15014700,Willborg,Clearwater,Bagley,0.0,0.0,0.0,0.0,[],-95.449513,47.589987
@@ -1618,7 +1618,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 16037000,Strobus,Cook,Lutsen,10.31,9.5,22.0,8.0,[],-90.740484,47.751567
 16003900,Stump,Cook,Hovland,254.2,59.0,54.0,24.0,[],-90.130266,48.045147
 16007900,Sunfish,Cook,Grand Marais,84.46,40.0,25.0,13.2,[],-90.156545,47.990642
-16000100,Superior,Cook,Grand Marais,0.0,0.0,0.0,0.0,"['was00934', 'was02584', 'was00935', 'was00936', 'was01626', 'was00566', 'was00573', 'was02574', 'was00911', 'was00913', 'was02575', 'was00914', 'was00915', 'was02576', 'was00916', 'was00917', 'was00918', 'was02577', 'was00919', 'was00920', 'was00925', 'was02580', 'was00927', 'was02581', 'was00928', 'was02582', 'was00931', 'was02982']",-90.789304,47.361762
+16000100,Superior,Cook,Grand Marais,0.0,0.0,0.0,0.0,"['was00934', 'was02584', 'was00935', 'was00936', 'was01626', 'was02576', 'was00916', 'was00917', 'was00918', 'was02577', 'was00919', 'was00920', 'was00925', 'was02580', 'was00927', 'was02581', 'was00928', 'was02582', 'was00931', 'was00566', 'was00573', 'was02574', 'was00911', 'was00913', 'was02575', 'was00914', 'was00915', 'was02982']",-90.789304,47.361762
 16034300,Surber,Cook,Grand Marais,7.02,6.0,21.0,9.0,[],-90.558712,48.066353
 16021500,Swamp,Cook,Grand Marais,181.37,181.37,10.0,0.0,[],-90.482474,48.029023
 16025600,Swamp,Cook,Maple Hill,91.57,91.57,8.0,0.0,[],-90.58676,47.846182
@@ -1895,7 +1895,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 18041100,Nelson,Crow Wing,Jenkins,87.96,31.0,65.0,31.0,[],-94.302034,46.657684
 18039900,Nisswa,Crow Wing,Nisswa,219.3,121.0,23.0,0.0,['was03038'],-94.297489,46.519249
 18010400,Nokay,Crow Wing,Brainerd,703.56,218.0,42.0,0.0,['was02310'],-93.963234,46.378375
-18037200,North Long,Crow Wing,Merrifield,6190.35,3905.0,97.0,0.0,"['was01033', 'was00993', 'was01004']",-94.240725,46.439275
+18037200,North Long,Crow Wing,Merrifield,6190.35,3905.0,97.0,0.0,"['was00993', 'was01004', 'was01033']",-94.240725,46.439275
 18022700,O'Brien,Crow Wing,Cross Lake,185.7,103.0,49.0,0.0,['was02959'],-94.04165,46.676135
 18009100,Olander,Crow Wing,Oreland,0.0,0.0,0.0,0.0,[],-93.938627,46.456235
 18017100,Olson,Crow Wing,Emily,0.0,0.0,0.0,0.0,[],-93.8904,46.654376
@@ -2114,7 +2114,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 21034100,Erwin,Douglas,Evansville,0.0,0.0,0.0,0.0,[],-95.709695,45.969813
 21019300,Esala,Douglas,Holmes City,0.0,0.0,0.0,0.0,[],-95.621375,45.873088
 21016200,Freeborn,Douglas,Farwell,247.64,171.87,18.0,12.0,['was02878'],-95.616377,45.794008
-21005200,Geneva,Douglas,Alexandria,639.81,295.38,63.0,24.0,"['was02877', 'was02880']",-95.328532,45.900779
+21005200,Geneva,Douglas,Alexandria,639.81,295.38,63.0,24.0,"['was02880', 'was02877']",-95.328532,45.900779
 21018900,Gilbert,Douglas,Holmes City,201.66,190.0,17.0,8.0,['was01847'],-95.570669,45.883917
 21015000,Grants,Douglas,Holmes City,176.76,64.31,60.0,25.0,['was01850'],-95.544025,45.82709
 21037600,Grants Slough,Douglas,Holmes City,0.0,0.0,0.0,0.0,[],-95.535749,45.835821
@@ -2126,7 +2126,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 21035500,Ina,Douglas,Melby,217.67,125.07,48.0,0.0,[],-95.723469,46.076806
 21013600,Indian,Douglas,Leaf Valley,98.96,70.12,38.0,0.0,['was02876'],-95.477093,46.024955
 21014300,Indian,Douglas,Holmes City,0.0,0.0,0.0,0.0,[],-95.513237,45.88627
-21007600,Irene,Douglas,Miltona,639.26,240.38,44.0,19.8,"['was02875', 'was01853']",-95.30724,46.061068
+21007600,Irene,Douglas,Miltona,639.26,240.38,44.0,19.8,"['was01853', 'was02875']",-95.30724,46.061068
 21032300,Jennie,Douglas,Brandon,0.0,0.0,0.0,0.0,['was01187'],-95.674387,45.93955
 21005500,Jessie,Douglas,Nelson,110.23,69.04,26.0,11.0,[],-95.307997,45.86292
 21011200,Johnson,Douglas,Alexandria,0.0,0.0,0.0,0.0,[],-95.422575,45.872439
@@ -2144,7 +2144,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 21004600,Lovera,Douglas,Forada,0.0,0.0,0.0,0.0,[],-95.312144,45.77262
 21020800,Lower Hunt,Douglas,Evansville,0.0,0.0,0.0,0.0,[],-95.617441,46.011094
 21007900,Maple,Douglas,Forada,830.87,405.04,78.0,16.1,"['was01197', 'was02623']",-95.372053,45.776967
-21009200,Mary,Douglas,Holmes City,2450.44,1096.45,40.0,17.0,"['was01193', 'was02626']",-95.483122,45.828873
+21009200,Mary,Douglas,Holmes City,2450.44,1096.45,40.0,17.0,"['was02626', 'was01193']",-95.483122,45.828873
 21018000,Mill,Douglas,Alexandria,451.12,196.42,40.0,20.0,['was01196'],-95.531972,45.851963
 21008300,Miltona,Douglas,Leaf Valley,5724.3,2758.66,105.0,0.0,"['was01183', 'was01185', 'was01186']",-95.375208,46.03833
 21010800,Mina,Douglas,Garfield,411.42,158.2,123.0,28.0,['was01192'],-95.475543,45.893423
@@ -2157,7 +2157,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 21055100,Nelson,Douglas,Holmes City,85.96,57.0,52.0,0.0,[],-95.460955,45.857605
 21009500,North Union,Douglas,Alexandria,118.41,88.27,42.0,5.0,[],-95.42894,45.916774
 21017800,Olaf,Douglas,Farwell,0.0,0.0,0.0,0.0,[],-95.55504,45.766736
-77021500,Osakis,Todd,Osakis,6389.37,3389.01,73.0,20.0,"['was01269', 'was02625', 'was01202']",-95.106505,45.908941
+77021500,Osakis,Todd,Osakis,6389.37,3389.01,73.0,20.0,"['was02625', 'was01202', 'was01269']",-95.106505,45.908941
 21025700,Oscar,Douglas,Holmes City,1231.44,827.0,25.0,13.0,['was02622'],-95.610982,45.830293
 26000200,Pelican,Grant,Ashby,3760.63,3042.48,21.0,10.0,['was01181'],-95.798602,46.060158
 21018200,Pete Nelson,Douglas,Holmes City,0.0,0.0,0.0,0.0,[],-95.580626,45.844569
@@ -2222,13 +2222,13 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 25001900,Clear,Goodhue,Etter,225.51,225.51,7.0,0.0,[],0.0,0.0
 25000300,Frontenac,Goodhue,Frontenac,79.41,79.41,8.0,0.0,[],-92.344745,44.511375
 25000500,Goose,Goodhue,Stroms,220.26,167.12,5.7,0.0,[],0.0,0.0
-25001702,Nelson,Goodhue,Stroms,0.0,0.0,0.0,0.0,"['was00877', 'was00875', 'was02333', 'was02632']",0.0,0.0
-25001704,North,Goodhue,Etter,0.0,0.0,0.0,0.0,"['was00877', 'was00875', 'was02333', 'was02632']",0.0,0.0
-25000100,Pepin,Goodhue,Lake City,25215.94,8060.0,60.0,21.0,"['was01073', 'was02329', 'was01077', 'was00873', 'was02923']",0.0,0.0
-25001706,Sharp Muskrat,Goodhue,Etter,0.0,0.0,0.0,0.0,"['was00877', 'was00875', 'was02333', 'was02632']",0.0,0.0
-25001703,Twin,Goodhue,Etter,0.0,0.0,0.0,0.0,"['was00877', 'was00875', 'was02333', 'was02632']",0.0,0.0
-25001700,U.S. Lock & Dam #3 Pool,Goodhue,Etter,1548.93,0.0,10.8,0.0,"['was00877', 'was00875', 'was02333', 'was02632']",0.0,0.0
-79000500,U.S. Lock & Dam #4 Pool,Wabasha,Wabasha,0.0,0.0,0.0,0.0,"['was01062', 'was01072', 'was01076', 'was02330', 'was00874', 'was00876']",0.0,0.0
+25001702,Nelson,Goodhue,Stroms,0.0,0.0,0.0,0.0,"['was00875', 'was02333', 'was00877', 'was02632']",0.0,0.0
+25001704,North,Goodhue,Etter,0.0,0.0,0.0,0.0,"['was00875', 'was02333', 'was00877', 'was02632']",0.0,0.0
+25000100,Pepin,Goodhue,Lake City,25215.94,8060.0,60.0,21.0,"['was00873', 'was01073', 'was02329', 'was01077', 'was02923']",0.0,0.0
+25001706,Sharp Muskrat,Goodhue,Etter,0.0,0.0,0.0,0.0,"['was00875', 'was02333', 'was00877', 'was02632']",0.0,0.0
+25001703,Twin,Goodhue,Etter,0.0,0.0,0.0,0.0,"['was00875', 'was02333', 'was00877', 'was02632']",0.0,0.0
+25001700,U.S. Lock & Dam #3 Pool,Goodhue,Etter,1548.93,0.0,10.8,0.0,"['was00875', 'was02333', 'was00877', 'was02632']",0.0,0.0
+79000500,U.S. Lock & Dam #4 Pool,Wabasha,Wabasha,0.0,0.0,0.0,0.0,"['was02330', 'was00874', 'was00876', 'was01062', 'was01072', 'was01076']",0.0,0.0
 25001800,Upper Clear,Goodhue,Etter,0.0,0.0,0.0,0.0,[],0.0,0.0
 26029400,Ash,Grant,Wendell,0.0,0.0,0.0,0.0,['was02874'],-96.143879,46.053221
 26009500,Barrett,Grant,Barrett,529.63,422.3,28.0,8.5,['was02873'],-95.882396,45.919855
@@ -2433,8 +2433,8 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 27002600,Wood,Hennepin,Richfield,0.0,0.0,0.0,0.0,[],-93.293139,44.877035
 28000503,Blue,Houston,La Crescent,0.0,0.0,0.0,0.0,[],0.0,0.0
 28000500,U.S. Lock & Dam #8 Pool,Houston,Brownsville,0.0,0.0,0.0,0.0,[],0.0,0.0
-28000100,U.S. Lock & Dam #9 Pool,Houston,Cee Jefferson,934.13,0.0,0.0,0.0,"['was02334', 'was00878', 'was02331', 'was00871', 'was00872', 'was02332']",0.0,0.0
-28000108,Zabolio,Houston,Reno (Houston),0.0,0.0,0.0,0.0,"['was02334', 'was00878', 'was02331', 'was00871', 'was00872', 'was02332']",0.0,0.0
+28000100,U.S. Lock & Dam #9 Pool,Houston,Cee Jefferson,934.13,0.0,0.0,0.0,"['was02331', 'was00871', 'was00872', 'was02332', 'was02334', 'was00878']",0.0,0.0
+28000108,Zabolio,Houston,Reno (Houston),0.0,0.0,0.0,0.0,"['was02331', 'was00871', 'was00872', 'was02332', 'was02334', 'was00878']",0.0,0.0
 29028600,Alice,Hubbard,Lake George,126.91,96.0,21.0,0.0,[],-95.082175,47.222879
 29020800,Bad Axe,Hubbard,Emmaville,303.26,125.0,39.0,19.0,[],-94.950727,47.083772
 29029200,Beauty,Hubbard,Park Rapids,54.96,6.5,53.0,0.0,['was01101'],-95.123869,47.164064
@@ -2560,7 +2560,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 30005400,Brobergs,Isanti,Cambridge,0.0,0.0,0.0,0.0,[],-93.254583,45.574537
 30008300,Elizabeth,Isanti,Cambridge,0.0,0.0,0.0,0.0,[],-93.303682,45.553433
 30003600,Elms,Isanti,Cambridge,51.6,43.0,26.0,0.0,[],-93.214469,45.54543
-30004300,Fannie,Isanti,Cambridge,360.01,307.7,33.0,0.0,"['was01707', 'was01698']",-93.183467,45.554455
+30004300,Fannie,Isanti,Cambridge,360.01,307.7,33.0,0.0,"['was01698', 'was01707']",-93.183467,45.554455
 30003500,Florence,Isanti,Edgewood,135.45,127.0,26.0,0.0,['was02802'],-93.224396,45.541618
 30008000,Francis,Isanti,Isanti,269.43,269.43,7.0,4.0,['was02805'],-93.329819,45.505927
 30010000,German,Isanti,Oxlip,0.0,0.0,0.0,0.0,['was02806'],-93.38704,45.477947
@@ -3156,7 +3156,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 34003300,Ella,Kandiyohi,Atwater,153.02,153.02,12.0,0.0,['was02794'],-94.813533,45.079706
 34021700,Florida,Kandiyohi,Spicer,705.39,267.0,40.0,0.0,['was01675'],-95.055894,45.251775
 34020400,Florida Slough,Kandiyohi,Norway Lake,0.0,0.0,0.0,0.0,['was02796'],-95.068591,45.237087
-34018100,Foot,Kandiyohi,Willmar,502.99,502.99,24.0,0.0,"['was01674', 'was02653']",-95.062315,45.131272
+34018100,Foot,Kandiyohi,Willmar,502.99,663.0,24.0,0.0,"['was01674', 'was02653']",-95.062315,45.131272
 34022400,Games,Kandiyohi,Sunburg,521.1,242.0,42.0,0.0,"['was01673', 'was01681']",-95.100678,45.332921
 34014200,George,Kandiyohi,Spicer,228.14,112.0,34.0,0.0,['was01682'],-94.983923,45.242632
 34012600,Gina,Kandiyohi,Spicer,0.0,0.0,0.0,0.0,[],-94.922904,45.202353
@@ -3229,7 +3229,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 34024500,West Solomon,Kandiyohi,Pennock,0.0,0.0,0.0,0.0,[],-95.125329,45.182955
 34011700,West Twin,Kandiyohi,Spicer,0.0,0.0,0.0,0.0,[],-94.99213,45.222032
 34005100,Wheeler,Kandiyohi,Atwater,0.0,0.0,0.0,0.0,[],-94.803374,45.168857
-34018000,Willmar,Kandiyohi,Willmar,636.44,636.44,14.0,0.0,"['was02797', 'was00052', 'was02897']",-95.036486,45.13799
+34018000,Willmar,Kandiyohi,Willmar,636.44,447.0,14.0,0.0,"['was02797', 'was00052', 'was02897']",-95.036486,45.13799
 34011200,Woodcock,Kandiyohi,Spicer,0.0,0.0,0.0,0.0,[],-94.900601,45.225724
 34014100,Woodcock,Kandiyohi,Spicer,0.0,0.0,0.0,0.0,[],-94.952723,45.242052
 35000300,Bronson,Kittson,Lake Bronson,312.09,221.0,29.0,11.7,"['was00635', 'was01450']",-96.615144,48.721837
@@ -3256,14 +3256,14 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 38069100,August,Lake,Isabella,228.68,219.0,19.0,0.0,['was00064'],-91.613007,47.761296
 38024500,Balsam,Lake,Finland,220.91,220.2,18.0,0.0,[],-91.202008,47.538424
 38056500,Bandana,Lake,Happy Wanderer,0.0,0.0,0.0,0.0,[],-91.531448,47.662236
-38040900,Bean,Lake,Silver Bay,31.46,16.0,26.0,12.0,[],-91.301264,47.30894
+38040900,Bean,Lake,Silver Bay,31.46,16.0,26.0,12.0,['was03119'],-91.301264,47.30894
 38040500,Bear,Lake,Beaver Bay,44.37,5.6,31.0,23.8,[],-91.344977,47.284935
 38040800,Bear,Lake,Silver Bay,18.27,5.3,69.0,27.0,[],-91.29151,47.312665
 38073700,Beaver Hut,Lake,Isabella,54.69,54.69,12.0,11.0,[],-91.666459,47.731221
 38055100,Beetle,Lake,Isabella,29.26,23.1,26.0,6.3,['was00070'],-91.522707,47.694852
 38004000,Besho,Lake,Sawbill Landing,40.48,40.48,4.5,0.0,[],-91.057254,47.703118
 38008500,Bill,Lake,Forest Center,49.87,49.87,2.0,0.0,[],-91.066493,47.811946
-69000300,Birch,St. Louis,Babbitt,7073.88,1060.0,25.0,0.0,"['was01171', 'was02502', 'was01170', 'was02952']",-91.843124,47.765671
+69000300,Birch,St. Louis,Babbitt,7073.88,1060.0,25.0,0.0,"['was01170', 'was01171', 'was02502', 'was02952']",-91.843124,47.765671
 38001700,Blesener,Lake,Finland,18.21,18.21,11.0,0.0,[],-91.142908,47.485648
 38026100,Bluebill,Lake,Manitou Junction,41.51,41.51,5.0,0.0,[],-91.2039,47.598335
 38069900,Bogberry,Lake,Happy Wanderer,81.28,81.27,7.0,0.0,[],-91.647587,47.80361
@@ -3461,7 +3461,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 40006300,German,Le Sueur,Greenland,791.64,521.0,51.0,13.0,"['was02667', 'was01406']",-93.728057,44.273955
 40000800,Goose,Le Sueur,,0.0,0.0,0.0,0.0,[],-93.556814,44.280703
 40007200,Goose,Le Sueur,Cordova,0.0,0.0,0.0,0.0,[],-93.726282,44.308617
-40003200,Gorman,Le Sueur,Le Center,521.12,521.12,14.0,0.0,"['was01404', 'was01401', 'was01402']",-93.660873,44.341477
+40003200,Gorman,Le Sueur,Le Center,521.12,521.12,14.0,0.0,"['was01401', 'was01402', 'was01404']",-93.660873,44.341477
 40002000,Greenleaf,Le Sueur,Doyle,301.71,263.0,19.0,0.0,['was01405'],-93.627536,44.397919
 40010400,Henry,Le Sueur,Cleveland,0.0,0.0,0.0,0.0,['was02672'],-93.815617,44.289282
 40000100,Horseshoe,Le Sueur,Waterville,416.62,338.0,26.0,0.0,['was01388'],-93.527063,44.263058
@@ -3492,7 +3492,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 40012800,Unnamed,Le Sueur,,0.0,0.0,0.0,0.0,[],0.0,0.0
 40000200,Upper Sakatah,Le Sueur,Waterville,892.01,892.01,12.0,0.0,['was00188'],-93.541507,44.227476
 40003300,Volney,Le Sueur,Le Center,268.86,130.0,67.0,0.0,['was00201'],-93.641397,44.368104
-41004300,Benton,Lincoln,Lake Benton,2699.48,2699.47,9.0,0.0,"['was00666', 'was00672', 'was02363', 'was00654', 'was02355', 'was00657']",-96.241679,44.287592
+41004300,Benton,Lincoln,Lake Benton,2699.48,2699.47,9.0,0.0,"['was00654', 'was02355', 'was00657', 'was00666', 'was00672', 'was02363']",-96.241679,44.287592
 41010100,Boone Slough,Lincoln,,0.0,0.0,0.0,0.0,[],0.0,0.0
 41005800,Curtis,Lincoln,Ivanhoe,0.0,0.0,0.0,0.0,[],-96.310319,44.396863
 41002100,Dead Coon,Lincoln,,0.0,0.0,0.0,0.0,['was02696'],-96.095484,44.361639
@@ -3668,7 +3668,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 47000500,Butternut,Meeker,Dassel,0.0,0.0,0.0,0.0,[],-94.306886,45.058996
 47008000,Casey,Meeker,Casey,0.0,0.0,0.0,0.0,[],-94.457162,45.075212
 47013300,Chicken,Meeker,Litchfield,0.0,0.0,0.0,0.0,[],-94.575106,45.127997
-47009500,Clear,Meeker,Watkins,529.07,479.7,18.0,10.0,"['was01648', 'was02470']",-94.445079,45.277103
+47009500,Clear,Meeker,Watkins,529.07,479.7,18.0,10.0,"['was02470', 'was01648']",-94.445079,45.277103
 86029300,Collinwood,Wright,Dassel,638.93,351.0,28.0,12.0,"['was01649', 'was01762', 'was01779']",-94.25522,45.050649
 47011300,Coombs,Meeker,Greenleaf,0.0,0.0,0.0,0.0,[],-94.543522,44.984604
 47008200,Dunns,Meeker,Darwin,151.89,85.0,20.0,12.0,['was02777'],-94.428941,45.155112
@@ -3686,7 +3686,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 47015100,Horseshoe,Meeker,Eden Valley,0.0,0.0,0.0,0.0,[],-94.538181,45.276817
 47001500,Jennie,Meeker,Dassel,1068.9,1064.05,15.0,0.0,"['was00684', 'was02281']",-94.332546,45.000263
 47004400,Jewitt,Meeker,Jennie,0.0,0.0,0.0,0.0,[],-94.383962,45.026875
-73020000,Koronis,Stearns,,0.0,0.0,0.0,0.0,"['was02366', 'was02443', 'was02434']",0.0,0.0
+73020000,Koronis,Stearns,,0.0,0.0,0.0,0.0,"['was02366', 'was02434', 'was02443']",0.0,0.0
 47009600,Little Mud,Meeker,Watkins,37.37,25.0,42.0,0.0,['was00682'],-94.428177,45.273772
 47002500,Little Swan,Meeker,Dassel,51.48,20.0,31.0,0.0,['was00683'],-94.292415,45.131325
 47001900,Little Wolf,Meeker,Lamson,0.0,0.0,0.0,0.0,['was00679'],-94.308208,44.995493
@@ -4026,7 +4026,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 56062100,North Stang,Otter Tail,Wall Lake,0.0,0.0,0.0,0.0,[],-95.925544,46.260808
 56060400,North Ten Mile,Otter Tail,Dalton,654.39,654.39,14.0,0.0,[],-95.976255,46.150945
 56037900,North Turtle,Otter Tail,Underwood,1773.17,1454.0,19.0,0.0,['was00643'],-95.816388,46.307048
-56056900,Norway,Otter Tail,Underwood,484.9,242.0,19.0,0.0,['was02519'],-95.894285,46.312042
+56056900,Norway,Otter Tail,Underwood,484.9,484.0,19.0,0.0,['was02519'],-95.894285,46.312042
 56095000,Olaf,Otter Tail,,0.0,0.0,0.0,0.0,[],0.0,0.0
 56081700,One Mile,Otter Tail,Fergus Falls,0.0,0.0,0.0,0.0,[],-96.050949,46.277712
 56086500,Opperman,Otter Tail,Fergus Falls,0.0,0.0,0.0,0.0,[],-96.062061,46.29932
@@ -4038,7 +4038,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 56051300,Ottos,Otter Tail,Vergas,0.0,0.0,0.0,0.0,[],-95.838647,46.581356
 56033500,Paul,Otter Tail,Perham,346.5,109.0,81.0,0.0,['was01176'],-95.699378,46.596544
 56082900,Pebble,Otter Tail,Fergus Falls,195.34,66.0,62.0,0.0,['was01464'],-96.036326,46.252669
-56078600,Pelican,Otter Tail,Pelican Rapids,3961.76,1625.0,55.0,0.0,"['was01177', 'was01467']",-96.019912,46.698498
+56078600,Pelican,Otter Tail,Pelican Rapids,3961.76,1625.0,55.0,0.0,"['was01467', 'was01177']",-96.019912,46.698498
 56020200,Pelican Bay,Otter Tail,Ottertail,0.0,0.0,0.0,0.0,['was01180'],-95.581655,46.418329
 56094100,Pete,Otter Tail,Norwegian Grove,0.0,0.0,0.0,0.0,[],-96.143618,46.65027
 56020400,Pickerel,Otter Tail,Ottertail,71.34,39.0,73.0,0.0,['was00555'],-95.57902,46.387717
@@ -4195,7 +4195,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 58007100,Close,Pine,Sturgeon Lake,33.13,19.0,37.0,14.0,[],-92.790278,46.380698
 58002600,Crooked,Pine,Duxbury,0.0,0.0,0.0,0.0,['was01624'],-92.549568,46.119321
 58011900,Cross,Pine,Pine City,925.3,507.3,30.0,14.3,['was00234'],-92.942897,45.850102
-58007300,Dago,Pine,Sturgeon Lake,117.81,107.0,20.0,0.0,"['was02485', 'was00093']",-92.794041,46.357438
+58007300,Dago,Pine,Sturgeon Lake,117.81,107.0,20.0,0.0,['was02485'],-92.794041,46.357438
 58011800,Devils,Pine,Pine City,15.62,4.0,80.0,0.0,[],-92.96319,45.816434
 58012600,Elbow,Pine,Groningen,99.33,73.0,33.0,0.0,[],-92.988017,46.161622
 58006800,Eleven,Pine,Sturgeon Lake,108.01,69.0,49.0,0.0,[],-92.705965,46.395934
@@ -4250,7 +4250,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 60026200,Crystal,Polk,Erskine,118.39,41.0,30.0,0.0,[],-96.10294,47.628445
 60014200,Hill River,Polk,McIntosh,102.07,67.0,60.0,0.0,['was02852'],-95.80805,47.677431
 60032700,Kittleson,Polk,Maple Bay,0.0,0.0,0.0,0.0,[],-96.239257,47.591603
-60030500,Maple,Polk,Mentor,1641.03,1575.61,14.0,0.0,"['was01448', 'was02915']",-96.171435,47.656759
+60030500,Maple,Polk,Mentor,1641.03,1575.61,14.0,0.0,"['was02915', 'was01448']",-96.171435,47.656759
 60021200,Mitchell,Polk,Erskine,0.0,0.0,0.0,0.0,[],-96.029296,47.672432
 60005400,Moe,Polk,Olga,50.65,50.65,12.0,0.0,[],-95.658439,47.729853
 60018500,Oak,Polk,Erskine,0.0,0.0,0.0,0.0,[],-95.962504,47.661692
@@ -4303,7 +4303,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 61006000,Marlu,Pope,Sedan,0.0,0.0,0.0,0.0,[],-95.300349,45.613579
 61009900,Mary,Pope,Starbuck,0.0,0.0,0.0,0.0,[],-95.447153,45.539271
 61002400,McCloud,Pope,Sedan,0.0,0.0,0.0,0.0,[],-95.220312,45.593994
-61013000,Minnewaska,Pope,Long Beach,8050.3,3290.84,32.0,17.0,"['was02512', 'was02995', 'was01320']",-95.45925,45.623181
+61013000,Minnewaska,Pope,Long Beach,8050.3,3290.84,32.0,17.0,"['was01320', 'was02995', 'was02512']",-95.45925,45.623181
 61010100,Nelson,Pope,Terrace,293.33,267.79,15.0,11.0,['was01455'],-95.443173,45.525183
 61011100,Pelican,Pope,Long Beach,517.77,421.87,34.0,10.0,['was02513'],-95.456285,45.644267
 61018300,Pike,Pope,Farwell,0.0,0.0,0.0,0.0,[],-95.644008,45.744603
@@ -4510,7 +4510,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 71001500,Rice,Sherburne,Lake Fremont,0.0,0.0,0.0,0.0,[],-93.584521,45.384732
 71016700,Round,Sherburne,Cable,35.78,23.0,43.0,12.5,[],-94.064014,45.47609
 71014700,Rush,Sherburne,Clear Lake,160.91,160.91,11.0,6.7,['was02106'],-93.933055,45.490858
-71004000,Sandy,Sherburne,Crown,64.14,42.0,41.0,13.9,"['was00329', 'was00058']",-93.518862,45.486609
+71004000,Sandy,Sherburne,Crown,64.14,42.0,41.0,13.9,"['was00058', 'was00329']",-93.518862,45.486609
 71014900,Stickney,Sherburne,Clear Lake,0.0,0.0,0.0,0.0,[],-94.044667,45.456836
 71002900,Stone,Sherburne,Crown,0.0,0.0,0.0,0.0,[],-93.521162,45.401212
 71009600,Thompson,Sherburne,Salida,84.34,63.0,22.0,9.6,[],-93.77755,45.35782
@@ -4843,11 +4843,11 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 78000700,Unnamed,Traverse,Barry,0.0,0.0,0.0,0.0,[],0.0,0.0
 78001700,Unnamed,Traverse,,0.0,0.0,0.0,0.0,[],0.0,0.0
 78002000,Unnamed,Traverse,,0.0,0.0,0.0,0.0,[],0.0,0.0
-79000101,Halfmoon,Wabasha,West Newton,0.0,0.0,0.0,0.0,"['was02323', 'was01066', 'was01074', 'was02328', 'was00868', 'was00869', 'was00870']",0.0,0.0
-79000103,Maloney,Wabasha,Weaver,0.0,0.0,0.0,0.0,"['was02323', 'was01066', 'was01074', 'was02328', 'was00868', 'was00869', 'was00870']",0.0,0.0
-79000102,Prichard,Wabasha,West Newton,0.0,0.0,0.0,0.0,"['was02323', 'was01066', 'was01074', 'was02328', 'was00868', 'was00869', 'was00870']",0.0,0.0
-79000502,Robinson,Wabasha,Wabasha,0.0,0.0,0.0,0.0,"['was01062', 'was01072', 'was01076', 'was02330', 'was00874', 'was00876']",0.0,0.0
-79000100,U.S. Lock & Dam #5 Pool,Wabasha,Weaver,4892.63,0.0,0.0,0.0,"['was02323', 'was01066', 'was01074', 'was02328', 'was00868', 'was00869', 'was00870']",0.0,0.0
+79000101,Halfmoon,Wabasha,West Newton,0.0,0.0,0.0,0.0,"['was00868', 'was00869', 'was00870', 'was02323', 'was01066', 'was01074', 'was02328']",0.0,0.0
+79000103,Maloney,Wabasha,Weaver,0.0,0.0,0.0,0.0,"['was00868', 'was00869', 'was00870', 'was02323', 'was01066', 'was01074', 'was02328']",0.0,0.0
+79000102,Prichard,Wabasha,West Newton,0.0,0.0,0.0,0.0,"['was00868', 'was00869', 'was00870', 'was02323', 'was01066', 'was01074', 'was02328']",0.0,0.0
+79000502,Robinson,Wabasha,Wabasha,0.0,0.0,0.0,0.0,"['was02330', 'was00874', 'was00876', 'was01062', 'was01072', 'was01076']",0.0,0.0
+79000100,U.S. Lock & Dam #5 Pool,Wabasha,Weaver,6326.31,0.0,0.0,0.0,"['was00868', 'was00869', 'was00870', 'was02323', 'was01066', 'was01074', 'was02328']",0.0,0.0
 80003400,Blueberry,Wadena,Menahga,532.54,532.54,15.0,0.0,['was01326'],-95.087109,46.787475
 80001200,Granning,Wadena,Oylen,0.0,0.0,0.0,0.0,['was01531'],-94.850862,46.588925
 80000500,Hazel,Wadena,Staples,0.0,0.0,0.0,0.0,[],-94.823552,46.40543
@@ -4882,7 +4882,7 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 82009100,Battle Creek,Washington,Landfall,105.74,102.95,15.3,0.0,['was01731'],-92.971763,44.944306
 82012000,Benz,Washington,Withrow,0.0,0.0,0.0,0.0,[],-92.891307,45.11097
 82004900,Big Carnelian,Washington,Stillwater,457.04,130.5,66.0,26.0,['was01702'],-92.808814,45.13598
-82005200,Big Marine,Washington,Forest Lake,1799.22,1152.0,60.0,0.0,"['was02804', 'was02799', 'was02803']",-92.854168,45.220777
+82005200,Big Marine,Washington,Forest Lake,1799.22,1152.0,60.0,0.0,"['was02799', 'was02803', 'was02804']",-92.854168,45.220777
 82005400,Bone,Washington,Forest Lake,221.45,124.0,30.0,0.0,['was01700'],-92.859457,45.286198
 82001700,Carol,Washington,Carnelian Junction,0.0,0.0,0.0,0.0,[],-92.842624,45.096169
 82004500,Clear,Washington,Maple Island (Washington),41.72,29.0,27.0,5.0,[],-92.82336,45.164527
@@ -5160,15 +5160,15 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 87003000,Wood,Yellow Medicine,Wood Lake,484.69,484.69,9.0,0.0,['was02175'],-95.532359,44.685966
 39000202,Lake of the Woods (Fourmile Bay),Lake of the Woods,,0.0,0.0,0.0,0.0,"['was02131', 'was02508', 'was01447', 'was02509', 'was01449']",-94.732294,48.856695
 04003501,Red (Upper Red),Beltrami,Waskish,119294.83,47681.2,15.0,12.0,[],-94.77531,48.133596
-11020303,Leech (Ah-Gwah-Chin),Cass,,0.0,0.0,0.0,0.0,"['was01087', 'was02469', 'was00719', 'was02369', 'was00718', 'was00723', 'was02374', 'was00638', 'was00641', 'was00098', 'was00529', 'was03058']",-94.567859,47.063704
-11020302,Leech (Kabekona Bay),Cass,,0.0,0.0,0.0,0.0,"['was01087', 'was02469', 'was00719', 'was02369', 'was00718', 'was00723', 'was02374', 'was00638', 'was00641', 'was00098', 'was00529', 'was03058']",-94.646831,47.136116
-11020301,Leech (Main Basin),Cass,,0.0,0.0,0.0,0.0,"['was01087', 'was02469', 'was00719', 'was02369', 'was00718', 'was00723', 'was02374', 'was00638', 'was00641', 'was00098', 'was00529', 'was03058']",-94.423269,47.181168
-11020304,Leech (Shingobee Bay),Cass,,0.0,0.0,0.0,0.0,"['was01087', 'was02469', 'was00719', 'was02369', 'was00718', 'was00723', 'was02374', 'was00638', 'was00641', 'was00098', 'was00529', 'was03058']",-94.564833,47.049932
+11020303,Leech (Ah-Gwah-Chin),Cass,,0.0,0.0,0.0,0.0,"['was02469', 'was01087', 'was02369', 'was00718', 'was00719', 'was00638', 'was00641', 'was00723', 'was02374', 'was00529', 'was00098', 'was03058']",-94.567859,47.063704
+11020302,Leech (Kabekona Bay),Cass,,0.0,0.0,0.0,0.0,"['was02469', 'was01087', 'was02369', 'was00718', 'was00719', 'was00638', 'was00641', 'was00723', 'was02374', 'was00529', 'was00098', 'was03058']",-94.646831,47.136116
+11020301,Leech (Main Basin),Cass,,0.0,0.0,0.0,0.0,"['was02469', 'was01087', 'was02369', 'was00718', 'was00719', 'was00638', 'was00641', 'was00723', 'was02374', 'was00529', 'was00098', 'was03058']",-94.423269,47.181168
+11020304,Leech (Shingobee Bay),Cass,,0.0,0.0,0.0,0.0,"['was02469', 'was01087', 'was02369', 'was00718', 'was00719', 'was00638', 'was00641', 'was00723', 'was02374', 'was00529', 'was00098', 'was03058']",-94.564833,47.049932
 16063201,Gull (Main Basin),Cook,,0.0,0.0,0.0,0.0,['was01124'],-90.900198,48.163434
 18030801,Pelican (NE Bay),Crow Wing,,0.0,0.0,0.0,0.0,"['was00991', 'was00992', 'was02293', 'was03011']",-94.158918,46.610511
 18030802,Pelican (main lake),Crow Wing,,0.0,0.0,0.0,0.0,"['was00991', 'was00992', 'was02293', 'was03011']",-94.174972,46.573992
-69037801,East Vermilion,St. Louis,,0.0,0.0,0.0,0.0,"['was00596', 'was02078', 'was00604', 'was00583', 'was00584', 'was00480', 'was00592', 'was00593', 'was02074', 'was02234', 'was00482', 'was02237', 'was00504', 'was03083']",-92.333719,47.871102
-69037802,West Vermilion,St. Louis,,0.0,0.0,0.0,0.0,"['was00596', 'was02078', 'was00604', 'was00583', 'was00584', 'was00480', 'was00592', 'was00593', 'was02074', 'was02234', 'was00482', 'was02237', 'was00504', 'was03083']",-92.555012,47.930257
+69037801,East Vermilion,St. Louis,,0.0,0.0,0.0,0.0,"['was00480', 'was00592', 'was00593', 'was02074', 'was00596', 'was02078', 'was00604', 'was00583', 'was00584', 'was02234', 'was00482', 'was02237', 'was00504', 'was03083']",-92.333719,47.871102
+69037802,West Vermilion,St. Louis,,0.0,0.0,0.0,0.0,"['was00480', 'was00592', 'was00593', 'was02074', 'was00596', 'was02078', 'was00604', 'was00583', 'was00584', 'was02234', 'was00482', 'was02237', 'was00504', 'was03083']",-92.555012,47.930257
 69129101,Duluth/Superior Harbor,St. Louis,,0.0,0.0,0.0,0.0,['was02578'],-92.058663,46.724574
 13005903,North Sunrise Pool,Chisago,Stacy,409.93,409.93,6.0,0.0,"['was02203', 'was00300', 'was02180']",-92.924753,45.427216
 37035100,Big Stone NWR East Pool,Lac Qui Parle,Odessa,1286.18,0.0,0.0,0.0,[],-96.307208,45.233578
@@ -5324,9 +5324,9 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 69007500,Hegman,St. Louis,,0.0,0.0,0.0,0.0,[],0.0,0.0
 69007501,North Hegman,St. Louis,Ely,70.03,60.0,30.0,0.0,[],-91.909641,48.048823
 69007502,South Hegman,St. Louis,Ely,117.61,55.0,55.0,0.0,[],-91.913093,48.037386
-69037201,Island Lake Rsvr(W.Basin),St. Louis,,0.0,0.0,0.0,0.0,"['was00576', 'was00923', 'was02579', 'was01152']",-92.203652,47.013371
-69037202,Island Lake Rsvr(E.Basin),St. Louis,,0.0,0.0,0.0,0.0,"['was00576', 'was00923', 'was02579', 'was01152']",-92.114365,47.028991
-69037803,Pike Bay,St. Louis,,0.0,0.0,0.0,0.0,"['was00596', 'was02078', 'was00604', 'was00583', 'was00584', 'was00480', 'was00592', 'was00593', 'was02074', 'was02234', 'was00482', 'was02237', 'was00504', 'was03083']",-92.327171,47.814313
+69037201,Island Lake Rsvr(W.Basin),St. Louis,,0.0,0.0,0.0,0.0,"['was00923', 'was02579', 'was00576', 'was01152']",-92.203652,47.013371
+69037202,Island Lake Rsvr(E.Basin),St. Louis,,0.0,0.0,0.0,0.0,"['was00923', 'was02579', 'was00576', 'was01152']",-92.114365,47.028991
+69037803,Pike Bay,St. Louis,,0.0,0.0,0.0,0.0,"['was00480', 'was00592', 'was00593', 'was02074', 'was00596', 'was02078', 'was00604', 'was00583', 'was00584', 'was02234', 'was00482', 'was02237', 'was00504', 'was03083']",-92.327171,47.814313
 69043401,Sabin,St. Louis,Aurora,313.45,135.0,40.0,0.0,"['was00142', 'was00144']",-92.297451,47.586699
 69043402,Wynne,St. Louis,Aurora,278.87,70.0,52.0,0.0,"['was00142', 'was00144']",-92.287938,47.561774
 69049101,Fish Lk Flowage (Main Bay),St. Louis,,0.0,0.0,0.0,0.0,"['was01628', 'was01153']",-92.273854,46.940012
@@ -5342,17 +5342,17 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 70025902,South Twin,Scott,Glendale (Scott),0.0,0.0,0.0,0.0,[],-93.370749,44.745402
 72005001,High Island (Main Basin),Sibley,,0.0,0.0,0.0,0.0,['was01408'],-94.203927,44.666907
 73013301,Cedar Island (Main Bay),Stearns,,0.0,0.0,0.0,0.0,['was01774'],-94.500716,45.423285
-73020002,Koronis (main lake),Stearns,Paynesville,2968.29,1176.0,132.0,29.0,"['was02366', 'was02443', 'was02434']",-94.711858,45.33478
+73020002,Koronis (main lake),Stearns,Paynesville,2968.29,1176.0,132.0,29.0,"['was02366', 'was02434', 'was02443']",-94.711858,45.33478
 73025101,Melrose (Southeast Basin),Stearns,,0.0,0.0,0.0,0.0,['was00633'],-94.813825,45.677939
 73025102,Melrose (Northwest Basin),Stearns,,0.0,0.0,0.0,0.0,['was00633'],-94.824475,45.683509
 77014901,Long (Main Basin),Todd,,0.0,0.0,0.0,0.0,['was02439'],-94.889137,45.79856
 77014902,Long (South Bay),Todd,,0.0,0.0,0.0,0.0,['was02439'],-94.884723,45.788125
 77015001,Sauk (Southwest Bay),Todd,,0.0,0.0,0.0,0.0,"['was00586', 'was00453', 'was00331']",-94.956998,45.750645
 77015002,Sauk (North Bay),Todd,,0.0,0.0,0.0,0.0,"['was00586', 'was00453', 'was00331']",-94.925883,45.792091
-82005201,Big Marine - NE Bay,Washington,Scandia,0.0,0.0,0.0,0.0,"['was02804', 'was02799', 'was02803']",-92.856897,45.242267
-82005203,Big Marine - EC Bay,Washington,Scandia,0.0,0.0,0.0,0.0,"['was02804', 'was02799', 'was02803']",-92.847453,45.224174
-82005204,Big Marine (Main Lake),Washington,,0.0,0.0,0.0,0.0,"['was02804', 'was02799', 'was02803']",-92.854362,45.223613
-82005205,Big Marine (Ourlet Bay),Washington,,0.0,0.0,0.0,0.0,"['was02804', 'was02799', 'was02803']",-92.862035,45.201574
+82005201,Big Marine - NE Bay,Washington,Scandia,0.0,0.0,0.0,0.0,"['was02799', 'was02803', 'was02804']",-92.856897,45.242267
+82005203,Big Marine - EC Bay,Washington,Scandia,0.0,0.0,0.0,0.0,"['was02799', 'was02803', 'was02804']",-92.847453,45.224174
+82005204,Big Marine (Main Lake),Washington,,0.0,0.0,0.0,0.0,"['was02799', 'was02803', 'was02804']",-92.854362,45.223613
+82005205,Big Marine (Ourlet Bay),Washington,,0.0,0.0,0.0,0.0,"['was02799', 'was02803', 'was02804']",-92.862035,45.201574
 82009001,Wilmes Lake North Portion,Washington,,0.0,0.0,0.0,0.0,[],-92.91711,44.933387
 82009002,Wilmes Lake South Portion,Washington,,0.0,0.0,0.0,0.0,[],-92.913278,44.927833
 82011301,Goose (North),Washington,,0.0,0.0,0.0,0.0,[],-92.911638,44.964454
@@ -5414,9 +5414,9 @@ lake_id,lake_name,lake_county,nearest_town,lake_area,littoral_area,lake_depth,me
 70032202,Unnamed (east portion),Scott,,0.0,0.0,0.0,0.0,[],0.0,0.0
 72004601,Unnamed (east portion),Sibley,,0.0,0.0,0.0,0.0,[],0.0,0.0
 73013304,Cedar Island (East Lk),Stearns,,0.0,0.0,0.0,0.0,['was01774'],-94.513823,45.438337
-76014601,Oliver (east portion),Swift,Appleton,467.25,0.0,18.0,0.0,"['was00691', 'was02177']",-96.019314,45.334102
+76014601,Oliver (east portion),Swift,Appleton,467.25,0.0,32.0,0.0,"['was00691', 'was02177']",-96.019314,45.334102
 76014602,Oliver (west portion),Swift,Appleton,218.4,0.0,14.0,0.0,"['was00691', 'was02177']",-96.040792,45.347673
-79000104,West Newton Chute,Wabasha,West Newton,0.0,0.0,0.0,0.0,"['was02323', 'was01066', 'was01074', 'was02328', 'was00868', 'was00869', 'was00870']",0.0,0.0
+79000104,West Newton Chute,Wabasha,West Newton,0.0,0.0,0.0,0.0,"['was00868', 'was00869', 'was00870', 'was02323', 'was01066', 'was01074', 'was02328']",0.0,0.0
 80002701,Jim Cook (west),Wadena,Menahga,0.0,0.0,0.0,0.0,[],-95.022296,46.743943
 80002702,Jim Cook (east),Wadena,Menahga,0.0,0.0,0.0,0.0,[],-95.008482,46.748928
 86025201,Clearwater (East),Wright,Annandale,0.0,0.0,0.0,0.0,"['was01747', 'was01772']",-94.103912,45.295363

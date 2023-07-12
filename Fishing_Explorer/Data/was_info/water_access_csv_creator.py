@@ -8,7 +8,7 @@ def main():
     with open('was_id_list.csv', newline='') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
-            time.sleep(10)
+            time.sleep(2)
             i += 1
             was_id = row[0]
             was_info = get_was_info(was_id)

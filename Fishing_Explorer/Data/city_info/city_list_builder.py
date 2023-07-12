@@ -2,10 +2,13 @@ from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import csv
 
+#set browser
 browser = Browser("chrome")
 
+#wikipedia list of cities in Minnesota
 url = "https://en.wikipedia.org/wiki/List_of_cities_in_Minnesota"
 
+#visit browser and scrape city names
 browser.visit(url)
 browser.is_element_present_by_css("td", wait_time=1)
 html = browser.html
@@ -28,4 +31,5 @@ with open("MN_cities_list.csv", "w", newline="") as csvfile:
     writer = csv.writer(csvfile, delimiter="\n")
     writer.writerow(minnesota_city_list)
 
+#close browser
 browser.quit()

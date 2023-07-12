@@ -73,8 +73,8 @@ function getMedianCPUE(data, lakeID, speciesCode) {
     for (let i = 0; i < data[0].lake_results.length; i++) {
         let medianCPUEArray = []
         for (let i = 0; i < data[1].cpue_results.length; i++) {
-            if (data[1].cpue_results[i].lake_ID == lakeID && data[1].cpue_results[i].species == speciesCode) {
-                medianCPUEArray.push(Number(data[1].cpue_results[i].CPUE))
+            if (data[1].cpue_results[i].lake_id == lakeID && data[1].cpue_results[i].species == speciesCode) {
+                medianCPUEArray.push(Number(data[1].cpue_results[i].cpue))
             }
         }
         
@@ -101,11 +101,10 @@ function getMedianCPUE(data, lakeID, speciesCode) {
 function getAverageLength(data, lakeID, speciesCode) {
     let averageLengthArray = []
     for (let i = 0; i < data[2].length_results.length; i++) {
-        if (data[2].length_results[i].lake_ID == lakeID && data[2].length_results[i].species == speciesCode) {
+        if (data[2].length_results[i].lake_id == lakeID && data[2].length_results[i].species == speciesCode) {
             averageLengthArray.push(...data[2].length_results[i].fish_count)
         }
     }
-    
     if(averageLengthArray.length > 0); {
 
         let total = 0;
@@ -113,7 +112,6 @@ function getAverageLength(data, lakeID, speciesCode) {
             total += averageLengthArray[i];
         }
         let avg = Math.round((((total / averageLengthArray.length) + Number.EPSILON) * 100)) / 100;
-
         return avg
 
     }

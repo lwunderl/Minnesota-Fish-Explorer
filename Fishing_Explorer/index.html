@@ -26,15 +26,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="card-body" style="padding: 0px 5px 20px 5px">
               <h5>Choose Parameters for Search</h5>
-              <h5>Choose City:</h5>
-              <select id="selCity" onchange="cityChanged(this.value)"></select>
-              <h5>Choose Species:</h5>
-              <select id="selSpecies" onchange="speciesChanged(this.value)"></select>
-              <h5>Choose Distance:</h5>
-              <select id="selDistance" onchange="distanceChanged(this.value)"></select>
+              <div class="col-md-4">
+                <h5>Choose City:</h5>
+                <select id="selCity" onchange="cityChanged(this.value)"></select>
+              </div>
+              <div class="col-md-4">
+                <h5>Choose Species:</h5>
+                <select id="selSpecies" onchange="speciesChanged(this.value)"></select>
+              </div>
+              <div class="col-md-4">
+                <h5>Choose Distance:</h5>
+                <select id="selDistance" onchange="distanceChanged(this.value)"></select>                
+              </div>
             </div>
             <div class="col-md-12">
               <table class="table">

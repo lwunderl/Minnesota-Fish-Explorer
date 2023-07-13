@@ -8,9 +8,8 @@
   <title>Fish Finder</title>
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
   <!-- BootStrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,24 +21,40 @@
         <div class="row">
           <div class="col-md-12 jumbotron text-center">
             <h1>Fishing Lake Dashboard</h1>
-            <p>Use the interactive charts below to explore each lake</p>
+            <p>Use the interactive map below to explore each lake</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="card-body" style="padding: 0px 5px 20px 5px">
               <h5>Choose Parameters for Search</h5>
-              <div class="col-md-4">
-                <h5>Choose City:</h5>
-                <select id="selCity" onchange="cityChanged(this.value)"></select>
+              <div class="row">
+                <div class="col-md-4">
+                  <h5>Choose City:</h5>
+                  <select id="selCity" onchange="dataChanged(this.value)"></select>
+                </div>
+                <div class="col-md-4">
+                  <h5>Choose Species:</h5>
+                  <select id="selSpecies" onchange="choicesChanged(this.value)"></select>
+                </div>
+                <div class="col-md-4">
+                  <h5>Choose Distance:</h5>
+                  <select id="selDistance" onchange="dataChanged(this.value)"></select>                
+                </div>
               </div>
-              <div class="col-md-4">
-                <h5>Choose Species:</h5>
-                <select id="selSpecies" onchange="speciesChanged(this.value)"></select>
-              </div>
-              <div class="col-md-4">
-                <h5>Choose Distance:</h5>
-                <select id="selDistance" onchange="distanceChanged(this.value)"></select>                
+              <div class="row">
+                <div class="col-md-4">
+                  <h5>Choose Age of Data:</h5>
+                  <select id="selAge" onchange="dataChanged(this.value)"></select>
+                </div>
+                <div class="col-md-4">
+                  <h5>Choose Sampling Gear:</h5>
+                  <select id="selGear" onchange="choicesChanged(this.value)"></select>
+                </div>
+                <div class="col-md-4">
+                  <h5>Choose Number of Results:</h5>
+                  <select id="selResults" onchange="choicesChanged(this.value)"></select>                
+                </div>
               </div>
             </div>
             <div class="col-md-12">
@@ -66,15 +81,11 @@
         </div>
         <div class="row">
             <div class="col-md-12 d-flex justify-content-center">
-            <div id="map" style = "margin: 5px; height: 55vh; width: 90vh"></div>
+            <div id="map" style = "margin: 5px; height: 55vh; width: 125vh"></div>
             </div>
         </div>
     </div>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <!-- API key -->

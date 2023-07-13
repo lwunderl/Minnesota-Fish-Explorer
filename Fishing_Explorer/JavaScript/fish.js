@@ -1,4 +1,4 @@
-//create a variable for the API
+
 const lakeUrl = "http://127.0.0.1:5000/api/v1.0/lakes";
 
 const cityUrl = "http://127.0.0.1:5000/api/v1.0/cities";
@@ -38,13 +38,43 @@ function loadFishDropDown(data) {
 function loadDistanceDropDown() {
     //populate distance drop down menu
     let distanceDropDown = d3.select("#selDistance");
-    let distanceMenu = [5,10,20,30];
-    for (let i = 0; i < distanceMenu.length; i++) {
-        distanceDropDown.append("option").text(distanceMenu[i]);
+    let distanceMenuLabels = ["5 Miles", "10 Miles", "20 Miles", "30 Miles"]
+    let distanceMenuValues = [5,10,20,30];
+    for (let i = 0; i < distanceMenuLabels.length; i++) {
+        distanceDropDown.append("option").text(distanceMenuLabels[i]).property("value", distanceMenuValues[i]);
+    }
+};
+
+function loadDataAgeDropDown() {
+    //populate data age drop down menu
+    let dataAgeDropDown = d3.select("#selAge");
+    let dataAgeMenuValues = [5,10,20,30,100];
+    let dataAgeMenuLabels = ["less than 5 Years", "less than 10 Years", "less than 20 Years", "less than 30 Years", "All time"]
+    for (let i = 0; i < dataAgeMenuLabels.length; i++) {
+        dataAgeDropDown.append("option").text(dataAgeMenuLabels[i]).property("value", dataAgeMenuValues[i]);
+    }
+};
+
+function loadSamplingGearDropDown() {
+    //populate sampling gear choices
+    let gearDropDown = d3.select("#selGear");
+    let gearMenu = ["Standard Gill Nets", "Standard Trap Nets"];
+    for (let i = 0; i < gearMenu.length; i++) {
+        gearDropDown.append("option").text(gearMenu[i]);
+    }
+};
+
+function loadNumberOfResultsDropDown() {
+    //populate number of results preferred choices
+    let resultsDropDown = d3.select("#selResults");
+    let resultsMenu = [5,10,20,30,40,50];
+    for (let i = 0; i < resultsMenu.length; i++) {
+        resultsDropDown.append("option").text(resultsMenu[i]);
     }
 };
 
 function loadAllDropDowns() {
+    //load all drop down menus
     d3.json(cityUrl).then(function (data){
         loadCityDropDown(data)
     });
@@ -54,6 +84,9 @@ function loadAllDropDowns() {
     });
     
     loadDistanceDropDown()
+    loadDataAgeDropDown()
+    loadSamplingGearDropDown()
+    loadNumberOfResultsDropDown()
 }
 
 function getSpeciesCode(currentSpecies) {
@@ -129,42 +162,81 @@ function getColor(d) {
      }
 
 //prepare data for info panel
-function infoPanel(data) {
+async function infoPanel(data, currentSpecies, currentNumberResults) {
+    let speciesCode = await getSpeciesCode(currentSpecies)
+    let medianCPUE = 0
+    let averageLength = 0
+    let medianList = []
+    for (let i = 0; i < data[0].lake_results.length; i++) {
+        if (data[0].lake_results[i].lake_depth > 0) {
+            lakeID = data[0].lake_results[i].lake_id
+            medianCPUE = getMedianCPUE(data, lakeID, speciesCode)
+            averageLength = getAverageLength(data, lakeID, speciesCode)
+            medianList.push(
+                {
+                "lakeName": data[0].lake_results[i].lake_name,
+                "lakeDepth": data[0].lake_results[i].lake_depth,
+                "lakeArea": data[0].lake_results[i].lake_area,
+                "abundance": medianCPUE,
+                "averageLength": averageLength
+            }
+            )
+        }
+    }
+    medianList.sort(function(a,b) {
+        if (isNaN(b.abundance)) {
+            return -1
+        }
+        if (isNaN(a.abundance)) {
+            return 1
+        }
+        else {
+            return b.abundance - a.abundance
+        }
+    })
+
     let tableInfo = d3.select("#lakeResults");
     let tableHeader = d3.select("#tableHeader");
     tableHeader.text("")
     tableInfo.text("")
-    console.log(data)
     let search_results = 0;
-    for (let i = 0; i < data[0].lake_results.length; i++) {
-        if (data[0].lake_results[i].lake_depth > 0) {
-            tableInfo.append("tr");
-            tableInfo.append("td").text(`${data[0].lake_results[i].lake_name}`);
-            tableInfo.append("td").text(`${data[0].lake_results[i].lake_depth} feet`);
-            tableInfo.append("td").text(`${data[0].lake_results[i].lake_area} acres`);
-            search_results += 1
+
+    console.log(currentNumberResults)
+
+    resultsLimit = medianList.slice(0,currentNumberResults)
+
+    for (let i = 0; i < resultsLimit.length; i++) {
+        tableInfo.append("tr");
+        tableInfo.append("td").text(`${medianList[i].lakeName}`);
+        tableInfo.append("td").text(`${medianList[i].lakeDepth} feet`);
+        tableInfo.append("td").text(`${medianList[i].lakeArea} acres`);
+        tableInfo.append("td").text(`${medianList[i].abundance}`);
+        tableInfo.append("td").text(`${medianList[i].averageLength} inches`);
+        search_results += 1
         }
-    }
+
     tableHeader.append("tr").text(`Lake Search Results = ${search_results} Total Lakes Found`);
     tableHeader.append("th").attr("scope", "col").text("Lake Name")
     tableHeader.append("th").attr("scope", "col").text("Lake Depth")
     tableHeader.append("th").attr("scope", "col").text("Lake Area")
+    tableHeader.append("th").attr("scope", "col").text("Abundance")
+    tableHeader.append("th").attr("scope", "col").text("Average Length")
 }
 
 async function createFishingMap(data, currentSpecies) {
-
-    let speciesCode = await getSpeciesCode(currentSpecies)
-
-    //loop through dataFeatures and set variables for lat, lon, depth, and area
+    //remove old map
     myMap.remove()
+    //get code for current species
+    let speciesCode = await getSpeciesCode(currentSpecies)
     //create layer for street map
     let streetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
 
-    // create array variable to store circles
+    // create array variable to store info circles
     let fishingLakes = [];
 
+    //loop through each lake
     for (let i = 0; i < data[0].lake_results.length; i++) {
         if (data[0].lake_results[i].lake_depth > 0) {
             let lakeLat = data[0].lake_results[i].lake_latitude
@@ -175,13 +247,16 @@ async function createFishingMap(data, currentSpecies) {
             let lakeArea = data[0].lake_results[i].lake_area
             let medianCPUE = getMedianCPUE(data, lakeID, speciesCode)
             let averageLength = getAverageLength(data, lakeID, speciesCode)
-            if (averageLength && medianCPUE){
+            let circleSize = 100
+            if (averageLength) {circleSize = averageLength * 50}
+// create results list here then make map layer
+            if (medianCPUE){
                 fishingLakes.push(
                     L.circle([lakeLat, lakeLon], {
                         color: getColor(medianCPUE),
                         fillColor: getColor(medianCPUE),
                         fillOpacity: .75,
-                        radius: averageLength * 35
+                        radius: circleSize
                     }).bindPopup(
                         `<h4>Lake ID: ${lakeID}</h4>
                         <h6>Fish Species: ${currentSpecies}</h6>
@@ -196,7 +271,7 @@ async function createFishingMap(data, currentSpecies) {
             }
         }
     
-    //turn port values array into a layer
+    //create lakes layer
     lakes = L.layerGroup(fishingLakes);
     d3.json(cityUrl).then(function(data) {
         let mapCenter = []
@@ -221,34 +296,39 @@ loadAllDropDowns()
 
 //initialize variables
 let myMap = L.map("map");
-let currentCity = ""
-let currentSpecies = ""
-let currentDistance = 0
+let currentCity = "Ada"
+let currentSpecies = "No Particular Species"
+let currentDistance = 5
+let currentGear = "Standard Gill Nets"
+let currentDataAge = 5
+let currentNumberResults = 5
 let lakeResultUrl = ""
 let lakeData = ""
 
-function speciesChanged() {
+//function for changing data choices without retrieving new data from API
+function choicesChanged() {
     currentSpecies = d3.select("#selSpecies option:checked").text();
-    createFishingMap(lakeData, currentSpecies)
+    currentGear = d3.select("#selGear option:checked").text();
+    currentNumberResults = d3.select("#selResults option:checked").text();
+    if (lakeData){
+        createFishingMap(lakeData, currentSpecies)
+        infoPanel(lakeData, currentSpecies, currentNumberResults)
+    }
 }
 
-async function cityChanged() {
+//function for changing data and retrieving new data from API
+async function dataChanged() {
     currentCity = d3.select("#selCity option:checked").text();
     currentSpecies = d3.select("#selSpecies option:checked").text();
-    currentDistance = d3.select("#selDistance option:checked").text();
-    lakeResultUrl = `http://127.0.0.1:5000/api/v1.0/lake_results/${currentCity}/${currentDistance}`;
-    lakeData = await getLakeData(lakeResultUrl)
-    //infoPanel(lakeData)
-    createFishingMap(lakeData, currentSpecies)
-}
+    currentDistance = d3.select("#selDistance option:checked").property("value");
+    currentGear = d3.select("#selGear option:checked").text();
+    currentDataAge = d3.select("#selAge option:checked").property("value");
+    currentNumberResults = d3.select("#selResults option:checked").text();
 
-async function distanceChanged() {
-    currentCity = d3.select("#selCity option:checked").text();
-    currentSpecies = d3.select("#selSpecies option:checked").text();
-    currentDistance = d3.select("#selDistance option:checked").text();
     lakeResultUrl = `http://127.0.0.1:5000/api/v1.0/lake_results/${currentCity}/${currentDistance}`;
     lakeData = await getLakeData(lakeResultUrl)
-    //infoPanel(lakeData)
+
+    infoPanel(lakeData, currentSpecies, currentNumberResults)
     createFishingMap(lakeData, currentSpecies)
 }
 

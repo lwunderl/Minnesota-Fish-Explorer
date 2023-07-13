@@ -62,11 +62,6 @@ fish_info = dict(fish_info)
 cur.close()
 conn.close()
 
-#default YYYY-MM-DD format, datetime64
-start_date = "2000-01-01"
-#default gear from gear list, string, optional
-gear = "Standard gill nets"
-
 #convert coordinate lat or lon from degrees to radians; coordinate = -94.728528
 def get_radians(coordinate):
     radian = coordinate*np.pi/180
@@ -155,21 +150,36 @@ def get_lake_results(city, distance):
     #retrieve cpue and length data
     if lake_list:
 
+        cpue_api = []
         cur.execute(f"SELECT * FROM cpue_info WHERE lake_id IN {lake_ids}")
-        cpue_info = cur.fetchall()
-        cpue_info = list(cpue_info)
-        cpue_api = [{cpue_headers[x]: cpue_info[y][x] for x in range(len(cpue_info[y]))} for y in range(len(cpue_info))]
+        while True:
+            cpue_info = cur.fetchmany(500)
+            if cpue_info:
+                cpue_info = list(cpue_info)
+        #cpue_api = [{cpue_headers[x]: cpue_info[y][x] for x in range(len(cpue_info[y]))} for y in range(len(cpue_info))]
+                cpue_info_list = [{cpue_headers[x]: cpue_info[y][x] for x in range(len(cpue_info[y]))} for y in range(len(cpue_info))] 
+                cpue_api.extend(cpue_info_list)
+            else:
+                break
 
+        length_api = []
         cur.execute(f"SELECT * FROM length_info WHERE lake_id IN {lake_ids}")
-        length_info = cur.fetchall()
-        length_info = list(length_info)
-        length_api = [{length_headers[x]: length_info[y][x] for x in range(len(length_info[y]))} for y in range(len(length_info))]
-        for _ in length_api:
-            _["fish_count"] = json.loads(_["fish_count"])
+        while True:
+            length_info = cur.fetchmany(500)
+            if length_info:
+                length_info = list(length_info)
+        #length_api = [{length_headers[x]: length_info[y][x] for x in range(len(length_info[y]))} for y in range(len(length_info))]
+                length_info_list = [{length_headers[x]: length_info[y][x] for x in range(len(length_info[y]))} for y in range(len(length_info))]
+                for _ in length_info_list:
+                    _["fish_count"] = json.loads(_["fish_count"])
+                length_api.extend(length_info_list)
+            else:
+                break
 
         return [{"total_lake_results": len(lake_list), "lake_results": lake_list},
                 {"total_cpue_results": len(cpue_api), "cpue_results": cpue_api},
-                {"total_length_results": len(length_api), "length_results": length_api}]
+                {"total_length_results": len(length_api), "length_results": length_api}
+                ]
 
     #close connection to fish database
     cur.close()

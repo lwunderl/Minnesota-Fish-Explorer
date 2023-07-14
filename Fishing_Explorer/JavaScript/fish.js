@@ -102,39 +102,43 @@ function getLakeData(lakeResultUrl) {
     })
 }
 
-function getMedianCPUE(data, lakeID, speciesCode) {
-    for (let i = 0; i < data[0].lake_results.length; i++) {
-        let medianCPUEArray = []
-        for (let i = 0; i < data[1].cpue_results.length; i++) {
-            if (data[1].cpue_results[i].lake_id == lakeID && data[1].cpue_results[i].species == speciesCode) {
-                medianCPUEArray.push(Number(data[1].cpue_results[i].cpue))
-            }
+function getMedianCPUE(data, lakeID, speciesCode, currentDataAge, currentGear) {
+    let today = new Date()
+    let medianCPUEArray = []
+    for (let i = 0; i < data[1].cpue_results.length; i++) {
+        surveyDate = new Date(data[1].cpue_results[i].survey_date)
+        ageCutOff = today.getFullYear() - surveyDate.getFullYear()
+        if (data[1].cpue_results[i].lake_id == lakeID && data[1].cpue_results[i].species == speciesCode && ageCutOff <= currentDataAge) {
+            medianCPUEArray.push(Number(data[1].cpue_results[i].cpue))
         }
-        
-        if(medianCPUEArray.length > 0); {
+    }
+    
+    if(medianCPUEArray.length > 0); {
 
-            medianCPUEArray.sort(function(a,b){
-            return a-b;
-            });
+        medianCPUEArray.sort(function(a,b){
+        return a-b;
+        });
+    
+        let half = Math.floor(medianCPUEArray.length / 2);
         
-            let half = Math.floor(medianCPUEArray.length / 2);
-            
-            if (medianCPUEArray.length % 2) {
-                let medianCPUE = Math.round((medianCPUEArray[half] + Number.EPSILON) * 100) / 100
-                return medianCPUE
-            }
-            else{
-                let medianCPUE = Math.round((((medianCPUEArray[half - 1] + medianCPUEArray[half]) / 2) + Number.EPSILON) * 100) / 100
-                return medianCPUE
-            }
+        if (medianCPUEArray.length % 2) {
+            let medianCPUE = Math.round((medianCPUEArray[half] + Number.EPSILON) * 100) / 100
+            return medianCPUE
+        }
+        else{
+            let medianCPUE = Math.round((((medianCPUEArray[half - 1] + medianCPUEArray[half]) / 2) + Number.EPSILON) * 100) / 100
+            return medianCPUE
         }
     }
 }
 
-function getAverageLength(data, lakeID, speciesCode) {
+function getAverageLength(data, lakeID, speciesCode, currentDataAge) {
     let averageLengthArray = []
+    let today = new Date()
     for (let i = 0; i < data[2].length_results.length; i++) {
-        if (data[2].length_results[i].lake_id == lakeID && data[2].length_results[i].species == speciesCode) {
+        surveyDate = new Date(data[2].length_results[i].survey_date)
+        ageCutOff = today.getFullYear() - surveyDate.getFullYear()
+        if (data[2].length_results[i].lake_id == lakeID && data[2].length_results[i].species == speciesCode && ageCutOff <= currentDataAge) {
             averageLengthArray.push(...data[2].length_results[i].fish_count)
         }
     }
@@ -162,16 +166,18 @@ function getColor(d) {
      }
 
 //prepare data for info panel
-async function infoPanel(data, currentSpecies, currentNumberResults) {
-    let speciesCode = await getSpeciesCode(currentSpecies)
-    let medianCPUE = 0
-    let averageLength = 0
-    let medianList = []
+async function infoPanel(data, currentSpecies, currentNumberResults, currentDataAge) {
+    let speciesCode = await getSpeciesCode(currentSpecies);
+    let search_results = 0;
+    let medianCPUE = 0;
+    let averageLength = 0;
+    let medianList = [];
     for (let i = 0; i < data[0].lake_results.length; i++) {
         if (data[0].lake_results[i].lake_depth > 0) {
-            lakeID = data[0].lake_results[i].lake_id
-            medianCPUE = getMedianCPUE(data, lakeID, speciesCode)
-            averageLength = getAverageLength(data, lakeID, speciesCode)
+            search_results += 1
+            lakeID = data[0].lake_results[i].lake_id;
+            medianCPUE = getMedianCPUE(data, lakeID, speciesCode, currentDataAge);
+            averageLength = getAverageLength(data, lakeID, speciesCode, currentDataAge);
             medianList.push(
                 {
                 "lakeName": data[0].lake_results[i].lake_name,
@@ -197,13 +203,10 @@ async function infoPanel(data, currentSpecies, currentNumberResults) {
 
     let tableInfo = d3.select("#lakeResults");
     let tableHeader = d3.select("#tableHeader");
-    tableHeader.text("")
-    tableInfo.text("")
-    let search_results = 0;
+    tableHeader.text("");
+    tableInfo.text("");
 
-    console.log(currentNumberResults)
-
-    resultsLimit = medianList.slice(0,currentNumberResults)
+    resultsLimit = medianList.slice(0,currentNumberResults);
 
     for (let i = 0; i < resultsLimit.length; i++) {
         tableInfo.append("tr");
@@ -212,10 +215,9 @@ async function infoPanel(data, currentSpecies, currentNumberResults) {
         tableInfo.append("td").text(`${medianList[i].lakeArea} acres`);
         tableInfo.append("td").text(`${medianList[i].abundance}`);
         tableInfo.append("td").text(`${medianList[i].averageLength} inches`);
-        search_results += 1
         }
 
-    tableHeader.append("tr").text(`Lake Search Results = ${search_results} Total Lakes Found`);
+    tableHeader.append("tr").text(`Lake Search Results = ${search_results} Total Lakes Found with Data`);
     tableHeader.append("th").attr("scope", "col").text("Lake Name")
     tableHeader.append("th").attr("scope", "col").text("Lake Depth")
     tableHeader.append("th").attr("scope", "col").text("Lake Area")
@@ -223,7 +225,7 @@ async function infoPanel(data, currentSpecies, currentNumberResults) {
     tableHeader.append("th").attr("scope", "col").text("Average Length")
 }
 
-async function createFishingMap(data, currentSpecies) {
+async function createFishingMap(data, currentSpecies, currentNumberResults, currentDataAge) {
     //remove old map
     myMap.remove()
     //get code for current species
@@ -236,6 +238,8 @@ async function createFishingMap(data, currentSpecies) {
     // create array variable to store info circles
     let fishingLakes = [];
 
+    let lakeResults = [];
+
     //loop through each lake
     for (let i = 0; i < data[0].lake_results.length; i++) {
         if (data[0].lake_results[i].lake_depth > 0) {
@@ -245,32 +249,61 @@ async function createFishingMap(data, currentSpecies) {
             let lakeName = data[0].lake_results[i].lake_name
             let lakeDepth = data[0].lake_results[i].lake_depth
             let lakeArea = data[0].lake_results[i].lake_area
-            let medianCPUE = getMedianCPUE(data, lakeID, speciesCode)
-            let averageLength = getAverageLength(data, lakeID, speciesCode)
+            let medianCPUE = getMedianCPUE(data, lakeID, speciesCode, currentDataAge)
+            let averageLength = getAverageLength(data, lakeID, speciesCode, currentDataAge)
             let circleSize = 100
             if (averageLength) {circleSize = averageLength * 50}
-// create results list here then make map layer
-            if (medianCPUE){
-                fishingLakes.push(
-                    L.circle([lakeLat, lakeLon], {
-                        color: getColor(medianCPUE),
-                        fillColor: getColor(medianCPUE),
-                        fillOpacity: .75,
-                        radius: circleSize
-                    }).bindPopup(
-                        `<h4>Lake ID: ${lakeID}</h4>
-                        <h6>Fish Species: ${currentSpecies}</h6>
-                        <li>Lake Name: ${lakeName}</li>
-                        <li>Lake Depth: ${lakeDepth}</li>
-                        <li>Lake Area: ${lakeArea}</li>
-                        <li>Average Length: ${averageLength}</li>
-                        <li>Abundance: ${medianCPUE}</li>`
-                        )
-                    )
+            lakeResults.push(
+                {
+                    "lakeLat": lakeLat,
+                    "lakeLon": lakeLon,
+                    "lakeID": lakeID,
+                    "lakeName": lakeName,
+                    "lakeDepth": lakeDepth,
+                    "lakeArea": lakeArea,
+                    "abundance": medianCPUE,
+                    "averageLength": averageLength,
+                    "circleSize": circleSize
                 }
+                )
+        }   
+    }
+    lakeResults.sort(function(a,b) {
+        if (isNaN(b.abundance)) {
+            return -1
+        }
+        if (isNaN(a.abundance)) {
+            return 1
+        }
+        else {
+            return b.abundance - a.abundance
+        }
+    })
+
+// create results list here then make map layer
+    resultsLimit = lakeResults.slice(0,currentNumberResults)
+
+    for (let i = 0; i < resultsLimit.length; i++) {
+        if (lakeResults[i].abundance){
+            fishingLakes.push(
+                L.circle([lakeResults[i].lakeLat, lakeResults[i].lakeLon], {
+                    color: getColor(lakeResults[i].abundance),
+                    fillColor: getColor(lakeResults[i].abundance),
+                    fillOpacity: .75,
+                    radius: lakeResults[i].circleSize
+                }).bindPopup(
+                    `<h5>Lake ID: ${lakeResults[i].lakeID}</h5>
+                    <li style="font-size:11px">Lake Name: ${lakeResults[i].lakeName}</li>
+                    <li style="font-size:11px">Lake Depth: ${lakeResults[i].lakeDepth}</li>
+                    <li style="font-size:11px">Lake Area: ${lakeResults[i].lakeArea}</li>
+                    <li style="font-size:11px">Fish Species: ${currentSpecies}</li>
+                    <li style="font-size:11px">Average Length: ${lakeResults[i].averageLength}</li>
+                    <li style="font-size:11px">Abundance: ${lakeResults[i].abundance}</li>`
+                    )
+                )
             }
         }
-    
+
     //create lakes layer
     lakes = L.layerGroup(fishingLakes);
     d3.json(cityUrl).then(function(data) {
@@ -311,8 +344,8 @@ function choicesChanged() {
     currentGear = d3.select("#selGear option:checked").text();
     currentNumberResults = d3.select("#selResults option:checked").text();
     if (lakeData){
-        createFishingMap(lakeData, currentSpecies)
-        infoPanel(lakeData, currentSpecies, currentNumberResults)
+        createFishingMap(lakeData, currentSpecies, currentNumberResults, currentDataAge)
+        infoPanel(lakeData, currentSpecies, currentNumberResults, currentDataAge)
     }
 }
 
@@ -326,10 +359,10 @@ async function dataChanged() {
     currentNumberResults = d3.select("#selResults option:checked").text();
 
     lakeResultUrl = `http://127.0.0.1:5000/api/v1.0/lake_results/${currentCity}/${currentDistance}`;
-    lakeData = await getLakeData(lakeResultUrl)
+    lakeData = await getLakeData(lakeResultUrl);
 
-    infoPanel(lakeData, currentSpecies, currentNumberResults)
-    createFishingMap(lakeData, currentSpecies)
+    infoPanel(lakeData, currentSpecies, currentNumberResults, currentDataAge);
+    createFishingMap(lakeData, currentSpecies, currentNumberResults, currentDataAge);
 }
 
 

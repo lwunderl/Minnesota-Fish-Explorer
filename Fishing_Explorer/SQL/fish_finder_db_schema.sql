@@ -1,11 +1,16 @@
 --Drop Tables
-DROP TABLE if EXISTS length_info, cpue_info, water_access_info, lake_info, fish_info, city_info;
+DROP TABLE if EXISTS length_info, cpue_info, water_access_info, lake_info, fish_info, city_info, gear_info;
 
 --Create fish info table
 CREATE TABLE fish_info (
     fish_id VARCHAR(3) PRIMARY KEY,
     fish_description VARCHAR(30)
 );
+
+CREATE TABLE gear_info (
+    gear_id SERIAL PRIMARY KEY,
+    gear VARCHAR(50)
+)
 
 --Create city info table
 CREATE TABLE city_info (
@@ -68,7 +73,8 @@ CREATE TABLE cpue_info (
     weight_lower_quartile DECIMAL,
     weight_upper_quartile DECIMAL,
     FOREIGN KEY (lake_id) REFERENCES lake_info(lake_id),
-    FOREIGN KEY (species) REFERENCES fish_info(fish_id)
+    FOREIGN KEY (species) REFERENCES fish_info(fish_id),
+    FOREIGN KEY (gear) REFERENCES gear_info(gear)
 );
 
 --Create length info table

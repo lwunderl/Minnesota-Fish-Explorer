@@ -1,14 +1,13 @@
-
-const lakeUrl = "http://127.0.0.1:5000/api/v1.0/lakes";
+// set up URL's to retrieve api data
 
 const cityUrl = "http://127.0.0.1:5000/api/v1.0/cities";
 
 const fishUrl = "http://127.0.0.1:5000/api/v1.0/fish";
 
-const wasUrl = "http://127.0.0.1:5000/api/v1.0/wateraccess";
+const gearUrl = "http://127.0.0.1:5000/api/v1.0/gear";
 
+//method to populate city drop down menu 
 function loadCityDropDown(data) {
-    //populate city drop down menu 
     let cityMenu = []
     for (let i = 0; i < data.length; i++) {
         cityMenu.push(data[i].city_name);
@@ -21,8 +20,8 @@ function loadCityDropDown(data) {
     }
 };
 
+//method to populate species drop down menu
 function loadFishDropDown(data) {
-    //populate species drop down menu
     let speciesMenu = Object.values(data)
     for (let i = 0; i < data.length; i++) {
         speciesMenu.push(data[i]);
@@ -35,8 +34,22 @@ function loadFishDropDown(data) {
     }
 };
 
+//method to populate sampling gear choices
+function loadSamplingGearDropDown(data) {
+    let gearMenu = []
+    for (let i = 0; i < data.length; i++) {
+        gearMenu.push(data[i]);
+    }
+    gearMenu.sort()
+
+    let gearDropDown = d3.select("#selGear");
+    for (let i = 0; i < gearMenu.length; i++) {
+        gearDropDown.append("option").text(gearMenu[i]);
+    }
+};
+
+//method to populate distance drop down menu
 function loadDistanceDropDown() {
-    //populate distance drop down menu
     let distanceDropDown = d3.select("#selDistance");
     let distanceMenuLabels = ["5 Miles", "10 Miles", "20 Miles", "30 Miles"]
     let distanceMenuValues = [5,10,20,30];
@@ -45,8 +58,8 @@ function loadDistanceDropDown() {
     }
 };
 
+//method to populate data age drop down menu
 function loadDataAgeDropDown() {
-    //populate data age drop down menu
     let dataAgeDropDown = d3.select("#selAge");
     let dataAgeMenuValues = [5,10,20,30,100];
     let dataAgeMenuLabels = ["less than 5 Years", "less than 10 Years", "less than 20 Years", "less than 30 Years", "All time"]
@@ -55,15 +68,7 @@ function loadDataAgeDropDown() {
     }
 };
 
-function loadSamplingGearDropDown() {
-    //populate sampling gear choices
-    let gearDropDown = d3.select("#selGear");
-    let gearMenu = ["Standard Gill Nets", "Standard Trap Nets"];
-    for (let i = 0; i < gearMenu.length; i++) {
-        gearDropDown.append("option").text(gearMenu[i]);
-    }
-};
-
+//method to populate number of results drop down menu
 function loadNumberOfResultsDropDown() {
     //populate number of results preferred choices
     let resultsDropDown = d3.select("#selResults");
@@ -73,8 +78,9 @@ function loadNumberOfResultsDropDown() {
     }
 };
 
+//method to populate all drop down menu's
 function loadAllDropDowns() {
-    //load all drop down menus
+
     d3.json(cityUrl).then(function (data){
         loadCityDropDown(data)
     });
@@ -82,13 +88,17 @@ function loadAllDropDowns() {
     d3.json(fishUrl).then(function (data){
         loadFishDropDown(data)
     });
+
+    d3.json(gearUrl).then(function(data){
+        loadSamplingGearDropDown(data)
+    });
     
     loadDistanceDropDown()
     loadDataAgeDropDown()
-    loadSamplingGearDropDown()
     loadNumberOfResultsDropDown()
 }
 
+//method to convert species name to species code i.e. "Walleye" to "WAE"
 function getSpeciesCode(currentSpecies) {
     return d3.json(fishUrl).then(function(data) {
         let speciesCode = Object.keys(data).find(key => data[key] == currentSpecies);
@@ -96,19 +106,21 @@ function getSpeciesCode(currentSpecies) {
     })
 }
 
+//method to get lake data from api
 function getLakeData(lakeResultUrl) {
     return d3.json(lakeResultUrl).then(function(data) {
         return data
     })
 }
 
+//method to get median cpue
 function getMedianCPUE(data, lakeID, speciesCode, currentDataAge, currentGear) {
     let today = new Date()
     let medianCPUEArray = []
     for (let i = 0; i < data[1].cpue_results.length; i++) {
         surveyDate = new Date(data[1].cpue_results[i].survey_date)
         ageCutOff = today.getFullYear() - surveyDate.getFullYear()
-        if (data[1].cpue_results[i].lake_id == lakeID && data[1].cpue_results[i].species == speciesCode && ageCutOff <= currentDataAge) {
+        if (data[1].cpue_results[i].lake_id == lakeID && data[1].cpue_results[i].species == speciesCode && data[1].cpue_results[i].gear == currentGear && ageCutOff <= currentDataAge) {
             medianCPUEArray.push(Number(data[1].cpue_results[i].cpue))
         }
     }
@@ -132,6 +144,7 @@ function getMedianCPUE(data, lakeID, speciesCode, currentDataAge, currentGear) {
     }
 }
 
+//method to get average length for all sampling gear types
 function getAverageLength(data, lakeID, speciesCode, currentDataAge) {
     let averageLengthArray = []
     let today = new Date()
@@ -154,6 +167,7 @@ function getAverageLength(data, lakeID, speciesCode, currentDataAge) {
     }
 }
 
+//method to create color scale for circles on map
 function getColor(d) {
     return d > 11 ? "#1BFF00" :
            d > 9  ? "#93FF00" :
@@ -165,8 +179,8 @@ function getColor(d) {
                       "#FF0000";
      }
 
-//prepare data for info panel
-async function infoPanel(data, currentSpecies, currentNumberResults, currentDataAge) {
+//method to create info table on page
+async function infoPanel(data, currentSpecies, currentNumberResults, currentDataAge, currentGear) {
     let speciesCode = await getSpeciesCode(currentSpecies);
     let search_results = 0;
     let medianCPUE = 0;
@@ -176,7 +190,7 @@ async function infoPanel(data, currentSpecies, currentNumberResults, currentData
         if (data[0].lake_results[i].lake_depth > 0) {
             search_results += 1
             lakeID = data[0].lake_results[i].lake_id;
-            medianCPUE = getMedianCPUE(data, lakeID, speciesCode, currentDataAge);
+            medianCPUE = getMedianCPUE(data, lakeID, speciesCode, currentDataAge, currentGear);
             averageLength = getAverageLength(data, lakeID, speciesCode, currentDataAge);
             medianList.push(
                 {
@@ -225,10 +239,11 @@ async function infoPanel(data, currentSpecies, currentNumberResults, currentData
     tableHeader.append("th").attr("scope", "col").text("Average Length")
 }
 
-async function createFishingMap(data, currentSpecies, currentNumberResults, currentDataAge) {
+//method to create map on page
+async function createFishingMap(data, currentSpecies, currentNumberResults, currentDataAge, currentGear) {
     //remove old map
     myMap.remove()
-    //get code for current species
+    //get species code for current species
     let speciesCode = await getSpeciesCode(currentSpecies)
     //create layer for street map
     let streetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -238,6 +253,7 @@ async function createFishingMap(data, currentSpecies, currentNumberResults, curr
     // create array variable to store info circles
     let fishingLakes = [];
 
+    // create array variable to store data results
     let lakeResults = [];
 
     //loop through each lake
@@ -249,7 +265,7 @@ async function createFishingMap(data, currentSpecies, currentNumberResults, curr
             let lakeName = data[0].lake_results[i].lake_name
             let lakeDepth = data[0].lake_results[i].lake_depth
             let lakeArea = data[0].lake_results[i].lake_area
-            let medianCPUE = getMedianCPUE(data, lakeID, speciesCode, currentDataAge)
+            let medianCPUE = getMedianCPUE(data, lakeID, speciesCode, currentDataAge, currentGear)
             let averageLength = getAverageLength(data, lakeID, speciesCode, currentDataAge)
             let circleSize = 100
             if (averageLength) {circleSize = averageLength * 50}
@@ -268,6 +284,8 @@ async function createFishingMap(data, currentSpecies, currentNumberResults, curr
                 )
         }   
     }
+
+    //sort data results by median cpue (abundance)
     lakeResults.sort(function(a,b) {
         if (isNaN(b.abundance)) {
             return -1
@@ -280,9 +298,10 @@ async function createFishingMap(data, currentSpecies, currentNumberResults, curr
         }
     })
 
-// create results list here then make map layer
+    // create results limit here
     resultsLimit = lakeResults.slice(0,currentNumberResults)
 
+    //fill fishingLakes array with map circles and bind pop-up
     for (let i = 0; i < resultsLimit.length; i++) {
         if (lakeResults[i].abundance){
             fishingLakes.push(
@@ -306,6 +325,8 @@ async function createFishingMap(data, currentSpecies, currentNumberResults, curr
 
     //create lakes layer
     lakes = L.layerGroup(fishingLakes);
+
+    //center map on current city and draw circles
     d3.json(cityUrl).then(function(data) {
         let mapCenter = []
         for (let i = 0; i < data.length; i++) {
@@ -321,8 +342,6 @@ async function createFishingMap(data, currentSpecies, currentNumberResults, curr
             });
         });
 };
-
-function cpueChart(currentSpecies) {};
 
 //load drop downs
 loadAllDropDowns()
@@ -344,8 +363,8 @@ function choicesChanged() {
     currentGear = d3.select("#selGear option:checked").text();
     currentNumberResults = d3.select("#selResults option:checked").text();
     if (lakeData){
-        createFishingMap(lakeData, currentSpecies, currentNumberResults, currentDataAge)
-        infoPanel(lakeData, currentSpecies, currentNumberResults, currentDataAge)
+        createFishingMap(lakeData, currentSpecies, currentNumberResults, currentDataAge, currentGear)
+        infoPanel(lakeData, currentSpecies, currentNumberResults, currentDataAge, currentGear)
     }
 }
 
@@ -361,8 +380,6 @@ async function dataChanged() {
     lakeResultUrl = `http://127.0.0.1:5000/api/v1.0/lake_results/${currentCity}/${currentDistance}`;
     lakeData = await getLakeData(lakeResultUrl);
 
-    infoPanel(lakeData, currentSpecies, currentNumberResults, currentDataAge);
-    createFishingMap(lakeData, currentSpecies, currentNumberResults, currentDataAge);
+    infoPanel(lakeData, currentSpecies, currentNumberResults, currentDataAge, currentGear);
+    createFishingMap(lakeData, currentSpecies, currentNumberResults, currentDataAge, currentGear);
 }
-
-

@@ -35,7 +35,7 @@ This readme describes how to host this application on your local machine.
 
 ## User Tutorial
 Use the drop down menus to explore the fishing opportunities in the area of your choice.
-<ol type="1">Choose between your choice of parameters:
+<ol type="1">
 <li>City: choose a city in Minnesota</li>
 <li>Species: choose a species for data analysis</li>
 <li>Distance: choose a distance from the city chosen</li>
@@ -43,6 +43,8 @@ Use the drop down menus to explore the fishing opportunities in the area of your
 <li>Sampling Gear: choose what sampling gear used to collect metrics for abundance (standard gill nets is a good start)</li>
 <li>Number of Results: choose how many results you want returned</li>
 </ol>
+
+Circles will appear on the map in the location of the lakes with the size of the circle representing fish length and the color of the circle representing most abundance (green) to least abundance (red).
 
 ![image](https://github.com/lwunderl/Minnesota-Fish-Explorer/assets/116906733/56b02f4f-a9a4-4831-a5a4-50bedd93f7e4)
 

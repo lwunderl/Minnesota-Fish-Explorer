@@ -50,3 +50,6 @@ Circles will appear on the map in the location of the lakes with the size of the
 
 
 ## Data Resources and Citations
+Lake and fish survey data retrieved from various api endpoints at https://www.dnr.state.mn.us/<br>
+City information retrieved from https://en.wikipedia.org/wiki/List_of_cities_in_Minnesota<br>
+City location information retrieved from https://www.geoapify.com/

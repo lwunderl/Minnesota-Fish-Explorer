@@ -1,5 +1,5 @@
 --Drop Tables
-DROP TABLE if EXISTS length_info, cpue_info, water_access_info, lake_info, fish_info, city_info, gear_info;
+DROP TABLE if EXISTS length_info, cpue_info, water_access_info, lake_info, city_info, gear_info, fish_info;
 
 --Create fish info table
 CREATE TABLE fish_info (
@@ -7,10 +7,11 @@ CREATE TABLE fish_info (
     fish_description VARCHAR(30)
 );
 
+--Create gear info table
 CREATE TABLE gear_info (
     gear_id SERIAL PRIMARY KEY,
-    gear VARCHAR(50)
-)
+    gear VARCHAR(50) UNIQUE
+);
 
 --Create city info table
 CREATE TABLE city_info (
@@ -93,6 +94,7 @@ CREATE TABLE length_info (
 );
 
 SELECT * FROM fish_info;
+SELECT * FROM gear_info;
 SELECT * FROM lake_info;
 SELECT * FROM water_access_info;
 SELECT * FROM city_info;

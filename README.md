@@ -44,7 +44,7 @@ Use the drop down menus to explore the fishing opportunities in the area of your
 <li>Number of Results: choose how many results you want returned</li>
 </ol>
 
-Circles will appear on the map in the location of the lakes with the size of the circle representing fish length and the color of the circle representing most abundance (green) to least abundance (red).<br>
+Circles will appear on the map in the location of the lakes with the size of the circle representing fish length and the color of the circle representing most abundance (green) to least abundance (red).<br><br>
 NOTE: If you are not getting many results, choose a different sampling gear, an older data age, or further distance. It is possible that lakes will return data, but not for your criteria. Some lakes may only contain information about the lake and not the fish, hence the lake results will return with data, but no display.
 
 ![image](https://github.com/lwunderl/Minnesota-Fish-Explorer/assets/116906733/56b02f4f-a9a4-4831-a5a4-50bedd93f7e4)
